@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="961b3f7a-3b3d-4009-b988-3b3b7121375a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/HomePage/.idea/HomePage.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HomePage/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HomePage/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HomePage/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HomePage/Homepage.html" afterPath="$PROJECT_DIR$/Homepage.html" />
-      <change beforePath="$PROJECT_DIR$/HomePage/Models/.idea/Models.iml" afterPath="$PROJECT_DIR$/Models/.idea/Models.iml" />
-      <change beforePath="$PROJECT_DIR$/HomePage/Models/.idea/modules.xml" afterPath="$PROJECT_DIR$/Models/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/HomePage/Models/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Models/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/HomePage/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change beforePath="$PROJECT_DIR$/HomePage/controllers/controller.js" afterPath="$PROJECT_DIR$/controllers/controller.js" />
-      <change beforePath="$PROJECT_DIR$/HomePage/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/HomePage/img/background.jpg" afterPath="$PROJECT_DIR$/img/background.jpg" />
-      <change beforePath="$PROJECT_DIR$/HomePage/img/backgroundOriginal.jpg" afterPath="$PROJECT_DIR$/img/backgroundOriginal.jpg" />
-      <change beforePath="$PROJECT_DIR$/HomePage/img/logo.png" afterPath="$PROJECT_DIR$/img/logo.png" />
-      <change beforePath="$PROJECT_DIR$/HomePage/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change beforePath="$PROJECT_DIR$/HomePage/js/jquery.js" afterPath="$PROJECT_DIR$/js/jquery.js" />
-      <change beforePath="$PROJECT_DIR$/HomePage/photo.jpeg" afterPath="$PROJECT_DIR$/photo.jpeg" />
-      <change beforePath="$PROJECT_DIR$/HomePage/redcross_logo-white.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/HomePage/routes/routes.js" afterPath="$PROJECT_DIR$/routes/routes.js" />
-      <change beforePath="$PROJECT_DIR$/HomePage/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change beforePath="$PROJECT_DIR$/HomePage/views/home.ejs" afterPath="$PROJECT_DIR$/views/home.ejs" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undefined/Readme.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undefined/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undefined/undefined.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-    </list>
+    <list default="true" id="961b3f7a-3b3d-4009-b988-3b3b7121375a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -55,8 +27,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+            <state relative-caret-position="212">
+              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -173,17 +145,17 @@
       <updated>1522227099201</updated>
       <workItem from="1522227102145" duration="203000" />
       <workItem from="1522230375069" duration="261000" />
-      <workItem from="1522232617927" duration="608000" />
+      <workItem from="1522232617927" duration="887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1072000" />
+    <option name="totallyTimeSpent" value="1351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="101" y="63" width="1334" height="768" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -191,7 +163,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -273,8 +245,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="212">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding />
         </state>
       </provider>
