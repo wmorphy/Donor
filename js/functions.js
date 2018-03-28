@@ -1,5 +1,13 @@
 $(document).ready(function() {
-    // $("#whatsComing").hide();
+    resizeBackground();
+
+    $(window).resize(function() {
+        resizeBackground();
+    });
+
+    $("#addEmail").on("click", function() {
+        alert("We've added you to the waiting list.");
+    });
 
     const comingHeight = $("#whatsComing").css('height');
     const interestHeight = $("#expressInterest").css('height');
@@ -29,3 +37,13 @@ $(document).ready(function() {
         }
     });
 });
+
+function resizeBackground() {
+    if (window.innerWidth > 1.5 * window.innerHeight) {
+        $("body").css("background-size", "100% auto");
+    }
+
+    else {
+        $("body").css("background-size", "auto 100%");
+    }
+}
