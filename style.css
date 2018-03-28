@@ -1,0 +1,27 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-image: url("photo.jpeg");
+    background-size: 100% 400%;
+}
+
+
+button:hover {
+    opacity:1;
+}
+
+button{
+    background-color: red;
+    color: white;
+}
+
+#id01 {
+    display: none; /* Hidden by default */
+}
+
+.header{
+    padding: 10px 20px 10px 20px ;
+    text-align: center;
+}
+.textContainer{
+    text-align: center;
+}
