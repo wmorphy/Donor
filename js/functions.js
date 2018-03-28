@@ -1,5 +1,8 @@
 $(document).ready(function() {
-    // $("#whatsComing").hide();
+
+    $("#addEmail").on("click", function() {
+        alert("We've added you to the waiting list.");
+    });
 
     const comingHeight = $("#whatsComing").css('height');
     const interestHeight = $("#expressInterest").css('height');

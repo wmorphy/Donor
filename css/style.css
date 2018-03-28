@@ -6,8 +6,9 @@
 }
 
 body {
-    background: url("../img/background.jpg") no-repeat fixed;
-    background-size: cover;
+    background: url("../img/newbackground.jpg");
+    background-size: 100% auto;
+    background-type: cover;
     font-family: Helvetica, sans-serif;
     padding: 25px;
     min-height: 100%;
