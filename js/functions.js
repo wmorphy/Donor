@@ -1,7 +1,9 @@
 $(document).ready(function() {
+    resizeContent();
     resizeBackground();
 
     $(window).resize(function() {
+        resizeContent();
         resizeBackground();
     });
 
@@ -39,11 +41,27 @@ $(document).ready(function() {
 });
 
 function resizeBackground() {
-    if (window.innerWidth > 1.5 * window.innerHeight) {
-        $("body").css("background-size", "100% auto");
+    console.log($("#pageContent").css('width'));
+    console.log($("#pageContent").css('height'));
+    if (removepx($("#pageContent").css('width')) > 1.8 * removepx($("#pageContent").css('height'))) {
+        console.log("resize 1");
+        $("#pageContent").css("background-size", "100% auto");
     }
 
     else {
-        $("body").css("background-size", "auto 100%");
+        console.log("resize 2");
+        $("#pageContent").css("background-size", "auto 100%");
     }
+}
+
+function resizeContent() {
+    const headerHeight = $("#pageHeaderNav").css('height');
+    const footerHeight = $("#pageFooter").css('height');
+    const contentHeight = window.innerHeight - removepx(headerHeight) - removepx(footerHeight);
+
+    $("#pageContent").css("height", contentHeight);
+}
+
+function removepx(string) {
+    return string.substr(0, string.length - 2);
 }
