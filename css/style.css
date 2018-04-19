@@ -44,7 +44,7 @@ body {
 }
 
 #pageContent {
-    background: url("../img/warmbackgroundcut.png");
+    background: url("../img/background.png");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
