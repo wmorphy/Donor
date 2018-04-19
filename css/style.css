@@ -10,7 +10,6 @@ html {
 }
 
 body {
-
     background-color: #D0D7D8;
 
     font-family: Helvetica, sans-serif;
@@ -21,87 +20,6 @@ body {
 
     min-height: 100%;
     height: 100%;
-}
-
-.container {
-    /*background-color: rgba(0, 0, 0, 0.2);*/
-    margin: 0 auto;
-    width: 30%;
-    text-align: center;
-}
-
-#mainHeader {
-    padding: 20px 0px;
-    text-align: center;
-}
-
-h1, h2 {
-    margin-top: 5px;
-}
-
-h1 {
-    font-size: 18pt;
-}
-
-h2 {
-    font-size: 15pt;
-}
-
-.bodyText {
-    display: block;
-    margin-top: 20px;
-    font-size: 12pt;
-}
-
-input[type="text"] {
-    padding: 5px;
-}
-
-div.sectionHeader {
-    display: inline-block;
-    text-decoration: underline;
-    margin: 7px;
-}
-
-div.sectionHeader:hover {
-    cursor: pointer;
-    font-weight: bold;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    padding: 5px;
-}
-
-#credit {
-    clear: both;
-    padding: 5px;
-    top: 0;
-    right: 0;
-    position: fixed;
-}
-
-img#noicee {
-    width: 150px;
-}
-
-img#redcross {
-    height: 100px;
-}
-
-hr {
-    margin: 10px auto;
-    width: 60%;
-    border: 0;
-    border-bottom: 1px solid #888;
-}
-
-span {
-    display: block;
-    margin-bottom: 5px;
 }
 
 #pageHeaderNav {
