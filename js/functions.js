@@ -1,10 +1,13 @@
 $(document).ready(function() {
     resizeContent();
     resizeBackground();
+    createGraph();
+    setTimeout(resizeTeams, 1000);
 
     $(window).resize(function() {
         resizeContent();
         resizeBackground();
+        resizeTeams();
     });
 
     $("#addEmail").on("click", function() {
@@ -41,15 +44,11 @@ $(document).ready(function() {
 });
 
 function resizeBackground() {
-    console.log($("#pageContent").css('width'));
-    console.log($("#pageContent").css('height'));
     if (removepx($("#pageContent").css('width')) > 1.8 * removepx($("#pageContent").css('height'))) {
-        console.log("resize 1");
         $("#pageContent").css("background-size", "100% auto");
     }
 
     else {
-        console.log("resize 2");
         $("#pageContent").css("background-size", "auto 100%");
     }
 }
@@ -66,6 +65,7 @@ function removepx(string) {
     return string.substr(0, string.length - 2);
 }
 
+<<<<<<< HEAD
 var buttonState = "off";
 function changeColor() {
     if (buttonState == "on") {
@@ -130,3 +130,87 @@ function resetGroup() {
 function bookedAlert() {
     alert("Appointment Booked!");
 }
+=======
+
+function resizeTeams() {
+    const statHeight = $("#statistics").css('height');
+    const pieHeight = $("#pieGraph").css('height');
+    const donationHeight = $("#donations").css('height');
+
+    const teamHeight = parseInt(removepx(statHeight)) + parseInt(removepx(pieHeight)) - parseInt(removepx(donationHeight));
+
+    $("#myTeams").css("height", teamHeight);
+
+}
+
+function createGraph() {
+    new Chart(document.getElementById("myChart"), {
+        type: 'pie',
+        data: {
+            labels: ["Blood", "Plasma", "Bone Marrow"],
+            datasets: [{
+                label: '# of Votes',
+                data: [7, 4, 1],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 206, 86)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            animation: false,
+            showAllTooltips: true,
+            tooltips: {
+                custom: function (tooltip) {
+                    if (!tooltip) return;
+                    // disable displaying the color box;
+                    tooltip.displayColors = false;
+                }
+            },
+            legend: {
+                display: false,
+            },
+            responsive: false
+        }
+    });
+}
+//
+// function addNotification{
+//     var table = document.getElementById("myTable");
+//     var row = table.insertRow(0);
+//     var cell1 = row.insertCell(0);
+//     cell1.innerHTML = "NEW CELL1";
+// }
+//
+
+//
+// function startData(){
+//     var notifications = [{num:1,text:ahfjdkhfaskj,img:"../img/noicee"}];
+//     for (i = 0; i < 4; i++) {
+//         var temp =document.getElementsByClassName("notification")[i];
+//         temp.getElementsByTagName("notifHeader").innerHTML = notifications[i];
+//
+//     }
+// }
+
+//
+// function addNotification(text){
+//     notifications.add(text);
+// }
+//
+// addNotification("Hello welcome to Donor space");
+// addNotification("Red cross hits all time new record donors on Donor Space");
+// addNotification("Hello welcome to Donor space");
+// addNotification("Red cross hits all time new record donors on Donor Space");
+// addNotification(5,"Hello welcome to Donor space");
+// addNotification(6,"Red cross hits all time new record donors on Donor Space");
+// addNotification(7,"Hello welcome to Donor space");
+// addNotification(8,"Red cross hits all time new record donors on Donor Space");
+>>>>>>> d5f2c2ee487be26b0c867fcc2adde045f678271f

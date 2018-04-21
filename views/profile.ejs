@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <link type="text/css" href="../css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <link rel="icon" href="../img/favicon.png" type="image/x-icon">
         <script src="../js/jquery.js"></script>
         <script src="../js/functions.js" type="text/javascript"></script>
         <title>Donorspace - Profile</title>
@@ -10,27 +13,100 @@
     <body>
         <div id="pageHeaderNav">
             <header id="pageHeader">
-                <img src="../img/logo.png">
+                <img id="pageLogo" src="../img/logo.png">
             </header>
 
 
             <nav id="pageNav">
-                Home &#8226; Appointments &#8226; Events &#8226; Teams &#8226; My Profile
+                <p id="home">
+                    <a href="home">Home &#8226;</a>
+                    <a href="">Appointments &#8226;</a>
+                    <a href="teamprofile">Teams &#8226;</a>
+                    <a href="">Events &#8226;</a>
+                    <a href="profile">My Profile </a>
+                </p>
             </nav>
         </div>
 
         <div id="pageContent">
             <div id="container">
-                <div class="imgRound">
+                <div class="imgRound imgMedium">
                     <img src="../img/niels.png">
                 </div>
-                <h1 class="profileName">Niels Van Berkel</h1>
+                <div id="profileInfo">
+                    <h1 class="profileName">Niels Van Berkel</h1>
+                    Donor Number: 8008135 &nbsp;&nbsp; Blood Type: A+ &nbsp;&nbsp; Haemoglobin: 15.4 g/dL
+                </div>
+                <a id="editProfile" title="Update Details">Update Details</a>
+
+                <br/><br/>
+
+                <div id="donations">
+                    <div class="nextDonation">
+                        <h1>You can next donate blood:</h1>
+                        <span>21 April 2018</span>
+                    </div>
+
+                    <hr/>
+
+                    <div class="nextDonation">
+                        <h1>You can next donate plasma:</h1>
+                        <span>21 April 2018</span>
+                    </div>
+
+                    <hr/>
+
+                    <div class="nextDonation">
+                        <h1>You aren't on the bone marrow registry:</h1>
+                        <span>Register Now</span>
+                    </div>
+
+                </div>
+                <div id="statistics">
+                    <div class="left">
+                        <h1>7</h1>
+                        Litres Donated
+                    </div>
+                    <div class="right">
+                        <h1>3</h1>
+                        Lives Saved
+                    </div>
+                </div>
+                <div id="pieGraph">
+                    <h1>Donation Breakdown</h1>
+                    <canvas id="myChart" class="left" width="180" height="180"></canvas>
+                    <div class="label right"><h2>Key</h2></div>
+                    <div class="label right"><div id="red" class="box"></div> Blood Donations</div>
+                    <div class="label right"><div id="blue" class="box"></div> Plasma Donations</div>
+                    <div class="label right"><div id="yellow" class="box"></div> Bone Marrow Donations</div>
+                </div>
+
+                <div id="myTeams">
+                    <div class="team">
+                        <div class="imgRound imgSmall left">
+                            <img src="../img/unimelb.jpg">
+                        </div>
+                        <div class="teamInfo">
+                            University of Melbourne
+                        </div>
+                    </div>
+                    <div class="team">
+                        <div class="imgRound imgSmall left">
+                            <img src="../img/dabois.png">
+                        </div>
+                        <div class="teamInfo">
+                            da bois
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
         <div id="pageFooter">
             <div id="pageContact">
-                Contact Us &#124; FB IN SN TW
+                Contact Us &#124; <img class="social" src="../img/Facebook-color.svg"> <img class="social" src="../img/Twitter-color.svg">
             </div>
 
             <div id="pageCopyright">
