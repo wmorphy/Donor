@@ -227,6 +227,8 @@ body {
     font-weight: bold;
 }
 
+
+
 #donations {
     background-color: rgba(0, 0, 0, 0.1);
     float: left;
@@ -431,13 +433,25 @@ br {
     width:150px;
     background: white;
     border-radius: 3px;
-    margin-left: 400px;
+
 }
 
 .timepicker {
     width:150px;
     background: white;
     border-radius: 3px;
-    margin-left: 400px;
-    padding: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    background: #CC0202;
+    font-size: small;
+    opacity: 0.8;
+    border: 1px solid;
+    padding: .5em 2em;
+    margin-right: 4.5em;
+    margin-left: 4.5em;
+    color: #FFFFFF;
+    box-shadow: inset 0px 1px 0px;
 }
