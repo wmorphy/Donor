@@ -5,9 +5,11 @@ const fetchHome = (req, res) => {
 const fetchHomePage= (req, res) => {
     res.render("homePage");
 };
-
+const fetchProfile = (req, res) => {
+    res.render("profile");
+}
 
 
 module.exports = {
-    fetchHome, fetchHomePage
+    fetchHome, fetchHomePage, fetchProfile
 };
