@@ -12,7 +12,7 @@ html {
 body {
     background-color: #D0D7D8;
 
-    font-family: Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
 
     min-width: 100%;
@@ -24,9 +24,9 @@ body {
 
 #pageHeaderNav {
     background-color: #292929;
-    border-bottom: 2px solid #CC0202;
+    border-bottom: 2px solid #C71F40;
     color: #FFF;
-    padding: 10px;
+    padding: 10px 20px;
     top: 0;
     width: 100%;
 
@@ -38,10 +38,16 @@ body {
 
 #pageHeader {
     float: left;
+    height: 40px;
+}
+
+#pageLogo {
+    height: 100%;
 }
 
 #pageNav {
     float: right;
+    line-height: 40px;
 }
 
 #pageContent {
@@ -49,6 +55,7 @@ body {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
+    overflow: auto;
     padding: 20px;
     width: 100%;
 
@@ -61,7 +68,6 @@ body {
 #container {
     background: rgba(0, 0, 0, 0.3);
     color: #FFF;
-    height: 100%;
     margin: 0 auto;
     padding: 20px;
     width: 60%;
@@ -74,7 +80,7 @@ body {
 
 #pageFooter {
     background-color: #292929;
-    border-bottom: 2px solid #CC0202;
+    border-bottom: 2px solid #C71F40;
     bottom: 0;
     color: #FFF;
     padding: 10px;
@@ -91,15 +97,28 @@ body {
     float: left;
 }
 
+.social {
+    height: 15px;
+    width: 15px;
+}
+
 #pageCopyright {
     float: right;
 }
 
 .imgRound {
     border-radius: 50%;
-    float: left;
-    height: 80px;
+    display: inline-block;
     overflow: hidden;
+}
+
+.imgSmall {
+    height: 50px;
+    width: 50px;
+}
+
+.imgMedium {
+    height: 80px;
     width: 80px;
 }
 
@@ -109,10 +128,196 @@ body {
     width: auto;
 }
 
-.profileName {
-    float: left;
-    font-size: 40px;
-    font-weight: normal;
-    line-height: 80px;
+#profileInfo {
+    display: inline-block;
+    font-size: 12px;
     margin-left: 10px;
+    padding: 9px 0 11px;
+}
+
+.profileName {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#editProfile {
+    background-color: #292929;
+    border-radius: 5px;
+    border-bottom: 2px solid #C71F40;
+    float: right;
+    font-size: 12px;
+    padding: 10px 20px;
+}
+
+#editProfile:hover {
+    font-weight: bold;
+}
+
+#donations {
+    background-color: rgba(0, 0, 0, 0.1);
+    float: left;
+    width: 49%;
+}
+
+#groupdonation {
+    background-color: rgba(0, 0, 0, 0.1);
+    float: left;
+    padding: 10px;
+    width: 49%;
+
+    /* Stop padding adding to size */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#statistics {
+    float: right;
+    width: 49%;
+}
+
+#statistics div {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    padding: 0px 0 25px;
+    text-align: center;
+    width: 49%;
+
+    /* Stop padding adding to size */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#statistics h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+#myTeams {
+    background-color: rgba(0, 0, 0, 0.1);
+    float: left;
+    margin-top: 2%;
+    padding: 5px 10px;
+    width: 49%;
+
+    /* Stop padding adding to size */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.team {
+    padding: 5px 0;
+}
+
+.teamInfo {
+    float: left;
+    font-size: 15px;
+    margin-left: 10px;
+    padding: 15px 0;
+}
+
+#options div {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px;
+    text-align: center;
+    width: 49%;
+
+    /* Stop padding adding to size */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#history {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    height: 200px;
+    width: 49%;
+}
+
+#pieGraph {
+    background-color: rgba(0, 0, 0, 0.1);
+    float: right;
+    margin-top: 2%;
+    padding: 10px;
+    width: 49%;
+
+    /* Stop padding adding to size */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#pieGraph h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#pieGraph h2 {
+    font-size: 20px;
+}
+
+.label {
+    padding: 5px 0;
+    width: 50%;
+}
+
+.box {
+    display: inline-block;
+    height: 11px;
+    margin-right: 2px;
+    width: 11px;
+}
+
+#red {
+    background-color: rgb(255, 99, 132);
+}
+
+#blue {
+    background-color: rgb(54, 162, 235);
+}
+
+#yellow {
+    background-color: rgb(255, 206, 86);
+}
+
+.nextDonation {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+
+    /* Stop padding adding to size */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.nextDonation h1 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.nextDonation span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#donations hr {
+    margin: 0 auto;
+    width: 70%;
 }

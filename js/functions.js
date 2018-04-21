@@ -1,10 +1,13 @@
 $(document).ready(function() {
     resizeContent();
     resizeBackground();
+    createGraph();
+    setTimeout(resizeTeams, 1000);
 
     $(window).resize(function() {
         resizeContent();
         resizeBackground();
+        resizeTeams();
     });
 
     $("#addEmail").on("click", function() {
@@ -41,15 +44,11 @@ $(document).ready(function() {
 });
 
 function resizeBackground() {
-    console.log($("#pageContent").css('width'));
-    console.log($("#pageContent").css('height'));
     if (removepx($("#pageContent").css('width')) > 1.8 * removepx($("#pageContent").css('height'))) {
-        console.log("resize 1");
         $("#pageContent").css("background-size", "100% auto");
     }
 
     else {
-        console.log("resize 2");
         $("#pageContent").css("background-size", "auto 100%");
     }
 }
@@ -64,4 +63,54 @@ function resizeContent() {
 
 function removepx(string) {
     return string.substr(0, string.length - 2);
+}
+
+function resizeTeams() {
+    const statHeight = $("#statistics").css('height');
+    const pieHeight = $("#pieGraph").css('height');
+    const donationHeight = $("#donations").css('height');
+
+    const teamHeight = parseInt(removepx(statHeight)) + parseInt(removepx(pieHeight)) - parseInt(removepx(donationHeight));
+
+    $("#myTeams").css("height", teamHeight);
+
+}
+
+function createGraph() {
+    new Chart(document.getElementById("myChart"), {
+        type: 'pie',
+        data: {
+            labels: ["Blood", "Plasma", "Bone Marrow"],
+            datasets: [{
+                label: '# of Votes',
+                data: [7, 4, 1],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 206, 86)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            animation: false,
+            showAllTooltips: true,
+            tooltips: {
+                custom: function (tooltip) {
+                    if (!tooltip) return;
+                    // disable displaying the color box;
+                    tooltip.displayColors = false;
+                }
+            },
+            legend: {
+                display: false,
+            },
+            responsive: false
+        }
+    });
 }
