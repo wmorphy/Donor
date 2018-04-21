@@ -109,10 +109,8 @@ body {
 #notificationContainer{
     overflow: auto;
     font-family: "Open Sans";
-    margin: auto;
-    background-opacity: 0;
-    padding: 10px;
-    width: auto;
+    margin: 10px auto 0;
+    padding: 0 10px;
     height: 500px;
 
 }
@@ -120,8 +118,8 @@ body {
 .notification{
     border-radius: 3px;
     background-color: white;
+    margin: 10px 0;
     padding: 5px;
-    margin: 10px;
     height: auto;
 
 }
@@ -139,7 +137,7 @@ body {
     float: left;
 }
 .descriptionContainer{
-    margin: 1px auto auto 50px;
+    margin: 2px 0 0 10px;
 }
 .notifHeader{
     text-align: left;
@@ -167,7 +165,6 @@ body {
 .notifPara{
     text-align: left;
     color: black;
-    ;
 }
 
 
@@ -179,8 +176,14 @@ body {
 
 .imgRound {
     border-radius: 50%;
+    padding: 3px;
     display: inline-block;
     overflow: hidden;
+}
+
+.imgSmaller {
+    height: 40px;
+    width: 40px;
 }
 
 .imgSmall {
