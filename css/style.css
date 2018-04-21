@@ -55,6 +55,7 @@ body {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    overflow: scroll;
 }
 
 #container {
@@ -91,4 +92,76 @@ body {
 
 #pageCopyright {
     float: right;
+}
+
+
+#notificationContainer{
+    overflow: scroll;
+    font-family: "Open Sans";
+    margin: auto;
+    background-opacity: 0;
+    padding: 10px;
+    width: auto;
+    height: 500px;
+
+}
+
+.notification{
+    border-radius: 3px;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    height: auto;
+
+}
+.avatarContainer{
+    font-size: 9px;
+    width: auto;
+    height: auto;
+    margin: 10px auto 10px 10px;
+}
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-radius: 50%;
+    float: left;
+}
+.descriptionContainer{
+    margin: 1px auto auto 50px;
+}
+.notifHeader{
+    text-align: left;
+    color: black;
+}
+.notifTime{
+    font-size: small;
+    color: black;
+}
+
+.notifInfo{
+    margin: 0px 8px 5px 8px;
+    font-size: 9px;
+    width:auto;
+    height: auto;
+    float: left;
+}
+
+.notifTitle{
+    margin: auto auto 6px auto;
+    color: black;
+    font-size: medium;
+}
+
+.notifPara{
+    text-align: left;
+    color: black;
+    ;
+}
+
+
+
+#notificationHeader{
+    text-align: center;
+    color: white;
 }
