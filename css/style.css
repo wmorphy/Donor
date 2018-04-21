@@ -402,3 +402,42 @@ a {
     color: white;
     text-decoration: none;
 }
+
+.button {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    font-family: "Open Sans";
+    text-align:center;
+    line-height:50px;
+    border-radius: 3px;
+    margin-top: 5px;
+    border-width: 0px;
+}
+
+.schedule-donation-form{
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: medium;
+}
+
+br {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.datepicker {
+    width:150px;
+    background: white;
+    border-radius: 3px;
+    margin-left: 400px;
+}
+
+.timepicker {
+    width:150px;
+    background: white;
+    border-radius: 3px;
+    margin-left: 400px;
+    padding: 15px 0;
+}

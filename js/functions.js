@@ -114,6 +114,56 @@ function createGraph() {
             responsive: false
         }
     });
+
+}
+function toggleTypes() {
+    $("#donBlood").click(function() {
+        $(this).css('background-color', '#C71F40');
+        resetBone();
+        resetPlasma();
+    });
+    $("#donBone").click(function() {
+        $(this).css('background-color', '#C71F40');
+        resetBlood();
+        resetPlasma();
+    });
+    $("#donPlasma").click(function() {
+        $(this).css('background-color', '#C71F40');
+        resetBlood();
+        resetBone();
+    });
+}
+function resetBlood() {
+    $("#donBlood").css('background-color', '#EEE');
+}
+function resetBone() {
+    $("#donBone").css('background-color', '#EEE');
+}
+function resetPlasma() {
+    $("#donPlasma").css('background-color', '#EEE');
+}
+$(readyFn);
+
+function toggleGroup() {
+    $("#donGroup").click(function () {
+        $(this).css('background-color', '#C71F40');
+        resetIndiv();
+    });
+    $("#donIndiv").click(function () {
+        $(this).css('background-color', '#C71F40');
+        resetGroup();
+    });
+}
+
+function resetIndiv() {
+    $("#donIndiv").css('background-color', '#EEE');
+}
+function resetGroup() {
+    $("#donGroup").css('background-color', '#EEE');
+}
+
+function bookedAlert() {
+    alert("Appointment Booked!");
 }
 //
 // function addNotification{

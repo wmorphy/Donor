@@ -13,6 +13,10 @@ const fetchTeam = (req, res) => {
     res.render("teamprofile");
 }
 
+const fetchAppointments = (req, res) => {
+    res.render("appointments");
+}
+
 module.exports = {
-    fetchLanding, fetchHome, fetchProfile, fetchTeam
+    fetchLanding, fetchHome, fetchProfile, fetchTeam, fetchAppointments
 }
