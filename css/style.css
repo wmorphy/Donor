@@ -396,3 +396,9 @@ body {
     margin: 0 auto;
     width: 70%;
 }
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
