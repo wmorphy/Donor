@@ -65,41 +65,7 @@ function removepx(string) {
     return string.substr(0, string.length - 2);
 }
 
-<<<<<<< HEAD
 
-//
-// function addNotification{
-//     var table = document.getElementById("myTable");
-//     var row = table.insertRow(0);
-//     var cell1 = row.insertCell(0);
-//     cell1.innerHTML = "NEW CELL1";
-// }
-//
-
-    //
-    // function startData(){
-    //     var notifications = [{num:1,text:ahfjdkhfaskj,img:"../img/noicee"}];
-    //     for (i = 0; i < 4; i++) {
-    //         var temp =document.getElementsByClassName("notification")[i];
-    //         temp.getElementsByTagName("notifHeader").innerHTML = notifications[i];
-    //
-    //     }
-    // }
-
-    //
-    // function addNotification(text){
-    //     notifications.add(text);
-    // }
-    //
-    // addNotification("Hello welcome to Donor space");
-    // addNotification("Red cross hits all time new record donors on Donor Space");
-    // addNotification("Hello welcome to Donor space");
-    // addNotification("Red cross hits all time new record donors on Donor Space");
-    // addNotification(5,"Hello welcome to Donor space");
-    // addNotification(6,"Red cross hits all time new record donors on Donor Space");
-    // addNotification(7,"Hello welcome to Donor space");
-    // addNotification(8,"Red cross hits all time new record donors on Donor Space");
-=======
 function resizeTeams() {
     const statHeight = $("#statistics").css('height');
     const pieHeight = $("#pieGraph").css('height');
@@ -149,4 +115,35 @@ function createGraph() {
         }
     });
 }
->>>>>>> origin/addison
+//
+// function addNotification{
+//     var table = document.getElementById("myTable");
+//     var row = table.insertRow(0);
+//     var cell1 = row.insertCell(0);
+//     cell1.innerHTML = "NEW CELL1";
+// }
+//
+
+//
+// function startData(){
+//     var notifications = [{num:1,text:ahfjdkhfaskj,img:"../img/noicee"}];
+//     for (i = 0; i < 4; i++) {
+//         var temp =document.getElementsByClassName("notification")[i];
+//         temp.getElementsByTagName("notifHeader").innerHTML = notifications[i];
+//
+//     }
+// }
+
+//
+// function addNotification(text){
+//     notifications.add(text);
+// }
+//
+// addNotification("Hello welcome to Donor space");
+// addNotification("Red cross hits all time new record donors on Donor Space");
+// addNotification("Hello welcome to Donor space");
+// addNotification("Red cross hits all time new record donors on Donor Space");
+// addNotification(5,"Hello welcome to Donor space");
+// addNotification(6,"Red cross hits all time new record donors on Donor Space");
+// addNotification(7,"Hello welcome to Donor space");
+// addNotification(8,"Red cross hits all time new record donors on Donor Space");

@@ -63,7 +63,6 @@ body {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    overflow: scroll;
 }
 
 #container {
@@ -107,10 +106,8 @@ body {
     float: right;
 }
 
-
-
 #notificationContainer{
-    overflow: scroll;
+    overflow: auto;
     font-family: "Open Sans";
     margin: auto;
     background-opacity: 0;
@@ -289,11 +286,9 @@ body {
     float: left;
     font-size: 15px;
     margin-left: 10px;
-<<<<<<< HEAD
-}
-=======
     padding: 15px 0;
 }
+
 
 #options div {
     background-color: rgba(0, 0, 0, 0.1);
@@ -398,4 +393,3 @@ body {
     margin: 0 auto;
     width: 70%;
 }
->>>>>>> origin/addison
