@@ -20,7 +20,7 @@
                             <img src="img/dabois.png" class="border border-light mr-4" width="75px">
 
                             <div class="media-body align-self-center">
-                                <h4 class="mb-1 font-rubik ls-1"><strong>Addison Scott-Fleming</strong></h4>
+                                <h4 class="mb-1 font-rubik ls-1"><strong id="fullName"></strong></h4>
 
                             </div>
                         </div>
@@ -43,18 +43,18 @@
                                 <h3 class="font-rubik text-uppercase">Personal Details <img src="img/pencil.png" height="20px"></h3>
                                 <p>
                                     <strong>Email:</strong> addisons@student.unimelb.edu.au<br/>
-                                    <strong>Mobile:</strong> 04XX XXX XXX<br/>
-                                    <strong>Date of Birth:</strong> 22/04/1997 (21 years old)
+                                    <strong>Mobile:</strong> <p id="Mobile"></p> <br/>
+                                    <strong>Date of Birth:</strong> <p id="DOB"></p>
                                 </p>
 
                                 <hr/>
 
                                 <h3 class="font-rubik text-uppercase">Address</h3>
                                 <p>
-                                    <strong>Street Address:</strong> 53 Imaginary Lane<br/>
-                                    <strong>Suburb/City:</strong> Doreen<br/>
-                                    <strong>Postcode:</strong> 3754<br/>
-                                    <strong>State:</strong> VIC
+                                    <strong>Street Address:</strong> <p id="address" ></p><br/>
+                                    <strong>Suburb/City:</strong> <p id="city" ></p> <br/>
+                                    <strong>Postcode:</strong> <p id="postcode"></p><br/>
+                                    <strong>State:</strong> <p id="state"></p>
                                 </p>
 
                                 <hr/>
@@ -107,7 +107,6 @@
                                             <th class="text-center">Bone</th>
                                         </thead>
                                         <tbody id="prevDon">
-                                            <script> startPreviousDonations() </script>
                                         </tbody>
                                     </table>
                                 </div>

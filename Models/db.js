@@ -11,5 +11,5 @@ mongoose.connect('mongodb://admin:admin@ds263089.mlab.com:63089/donorspace_db1',
 
 require('./members');
 // require('./teams');
-// require('./donations');
+require('./donations');
 require('./notifications');

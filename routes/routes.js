@@ -14,12 +14,15 @@ router.get("/news", controller.fetchNews);
 
 
 // create new member
-router.post("/api-createmember", restreqs.createMember);
-// find member
-// router.get('/api/:id', restreqs.findMember);
+// router.post("/api-createmember", restreqs.createMember);
+ //find member
 
+router.get('/api/:id', restreqs.findProfile);
 // find all notifications
 router.get('/api-notifs', restreqs.findAllNotifs);
+// find donations
+router.get('/api-donations', restreqs.findDonations);
+
 
 
 
