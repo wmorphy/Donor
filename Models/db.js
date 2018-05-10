@@ -1,6 +1,6 @@
 // Create database
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://dunnej1:donorspace@ds263089.mlab.com:63089/donorspace_db1', function(err){
+mongoose.connect('mongodb://admin:admin@ds263089.mlab.com:63089/donorspace_db1', function(err){
     if(!err){
         console.log('Connected to MongoDB');
     }
@@ -10,6 +10,6 @@ mongoose.connect('mongodb://dunnej1:donorspace@ds263089.mlab.com:63089/donorspac
 });
 
 require('./members');
-require('./teams');
-require('./donations');
+// require('./teams');
+// require('./donations');
 require('./notifications');

@@ -1,3 +1,5 @@
+// var notifs = db.notifications.find();
+
 $(document).ready(function() {
     resizeContent();
     resizeBackground();
@@ -142,7 +144,6 @@ function resetBone() {
 function resetPlasma() {
     $("#donPlasma").css('background-color', '#EEE');
 }
-$(readyFn);
 
 function toggleGroup() {
     $("#donGroup").click(function () {
@@ -165,35 +166,101 @@ function resetGroup() {
 function bookedAlert() {
     alert("Appointment Booked!");
 }
-//
-// function addNotification{
-//     var table = document.getElementById("myTable");
-//     var row = table.insertRow(0);
-//     var cell1 = row.insertCell(0);
-//     cell1.innerHTML = "NEW CELL1";
-// }
-//
 
+
+
+
+
+var notif = [
+
+    {Title: "DonorSpace",
+        Heading: "Welcome",
+        Photo:"../img/favicon.png",
+        Time: "5",
+        Para:"Welcome to the home of donations DonorPlace, where you " +
+        "can keep track maintain and book all of your donations."
+    },
+
+    {Title: "RedCross",
+        Heading: "New Record",
+        Photo: "../img/logo.jpeg",
+        Time: "8",
+        Para:"The Red Cross blood foundation has reached 300,000L"
+    },
+    {Title: "Australian Bone Marrow Registry",
+        Heading: "Goal Achieved",
+        Photo:"../img/ABMR.png",
+        Time: "10",
+        Para:"We have reached 300,000 bone marrow donors, now on the registry"
+    },
+    {Title: "Jen Benfelst",
+        Heading: "First Donation",
+        Photo:"../img/girl.png",
+        Time: "16",
+        Para:"Jen has accomplished her first donation on DonorSpace, saving 1 life"
+    },
+    {Title: "DonorSpace",
+        Heading: "Welcome",
+        Photo:"../img/favicon.png",
+        Time: "5",
+        Para:"Welcome to the home of donations DonorPlace, where you " +
+        "can keep track maintain and book all of your donations."
+    },
+
+    {Title: "RedCross",
+        Heading: "New Record",
+        Photo: "../img/logo.jpeg",
+        Time: "8",
+        Para:"The Red Cross blood foundation has reached 300,000L"
+    },
+    {Title: "Australian Bone Marrow Registry",
+        Heading: "Goal Achieved",
+        Photo:"../img/ABMR.png",
+        Time: "10",
+        Para:"We have reached 300,000 bone marrow donors, now on the registry"
+    },
+    {Title: "Jen Benfelst",
+        Heading: "First Donation",
+        Photo:"../img/girl.png",
+        Time: "16",
+        Para:"Jen has accomplished her first donation on DonorSpace, saving 1 life"
+    }
+];
 //
-// function startData(){
-//     var notifications = [{num:1,text:ahfjdkhfaskj,img:"../img/noicee"}];
-//     for (i = 0; i < 4; i++) {
-//         var temp =document.getElementsByClassName("notification")[i];
-//         temp.getElementsByTagName("notifHeader").innerHTML = notifications[i];
 //
-//     }
+//
+// function startNotifications() {
+//     $.each(data, function() {
+//         var html = '<div class="media px-2 pt-1">';
+//         html += '<img src=' + this.imgsource + 'alt="Add" class="mr-3 rounded" style="width:50px;">'
+//         html += '<div class="media-body">'
+//         html += '<h4 class="mb-1"></h4>'
+//         html += '<h5><small><i>2 hours ago</i></small></h5>'
+//         html += '<p>'+ this.heading +'</p></div>' +this.content +'</div>'
+//         $("#append").append(html);
+//     });
+//
+// };
+//
+//
+//
+// function numHours(time){
+//
 // }
 
-//
-// function addNotification(text){
-//     notifications.add(text);
-// }
-//
-// addNotification("Hello welcome to Donor space");
-// addNotification("Red cross hits all time new record donors on Donor Space");
-// addNotification("Hello welcome to Donor space");
-// addNotification("Red cross hits all time new record donors on Donor Space");
-// addNotification(5,"Hello welcome to Donor space");
-// addNotification(6,"Red cross hits all time new record donors on Donor Space");
-// addNotification(7,"Hello welcome to Donor space");
-// addNotification(8,"Red cross hits all time new record donors on Donor Space");
+
+
+
+
+//Prev Donations
+function startPreviousDonations() {
+    for (var i = 0; i < 10 ; i++) {
+        html = '<tr>'
+        html += '<td>08/05/2018</td>'
+        html += '<td>Melbourne Central</td>'
+        html += '<td class="text-success font-weight-bold text-center">&#10004;</td>'
+        html += '<td class="text-danger font-weight-bold text-center">&times;</td>'
+        html += '<td class="text-danger font-weight-bold text-center">&times;</td></tr>'
+        $("#prevDon").append(html);
+    }
+};

@@ -3,8 +3,9 @@ var Members = mongoose.model('members');
 var Notifications = mongoose.model('notifications');
 
 var createMember = function(req,res){
+
     var member = new Members({
-        "donorID": req.body.donorID,
+        "donorID": '',
         "password": req.body.password,
         "firstname": req.body.firstname,
         "lastname": req.body.lastname,
@@ -15,10 +16,10 @@ var createMember = function(req,res){
         "state": req.body.state,
         "phone": req.body.phone,
         "email": req.body.email,
-        "bloodtype": req.body.bloodtype,
-        "haemoglobin": req.body.haemoglobin,
-        "height": req.body.height,
-        "weight": req.body.weight
+        "bloodtype": '',
+        "haemoglobin": '',
+        "height": '',
+        "weight": ''
     });
     member.save(function(err,newMember){
         if(!err){
@@ -29,17 +30,17 @@ var createMember = function(req,res){
     });
 };
 
-var findMember = function(req,res){
-
-    var memberID = req.params.id;
-    Members.findById(memberID,function(err,member){
-        if(!err){
-            res.send(member);
-        }else{
-            res.sendStatus(404);
-        }
-    });
-};
+// var findMember = function(req,res){
+//
+//     var memberID = req.params.id;
+//     Members.findById(memberID,function(err,member){
+//         if(!err){
+//             res.send(member);
+//         }else{
+//             res.sendStatus(404);
+//         }
+//     });
+// };
 
 var findAllNotifs = function(req,res){
     Notifications.find(function(err,notifs){
@@ -52,5 +53,5 @@ var findAllNotifs = function(req,res){
 }
 
 module.exports.createMember = createMember;
-module.exports.findMember = findMember;
+// module.exports.findMember = findMember;
 module.exports.findAllNotifs = findAllNotifs;
