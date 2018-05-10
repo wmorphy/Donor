@@ -7,6 +7,7 @@ $(document).ready(function() {
     $("#test2").removeAttr("hidden");
     $("#test3").hide();
     $("#test3").removeAttr("hidden");
+    $("#test3").removeAttr("hidden");
 
     // Get what page we are currently on
     var location = window.location.href.split("/");
@@ -23,6 +24,28 @@ $(document).ready(function() {
         $("#test1").toggle();
         $("#test2").toggle();
         $("#test3").toggle();
+    });
+
+    $(".showForm").click(function() {
+        const thisForm = "#" + $(this).attr("id") + "Form";
+        $(thisForm).fadeIn();
+        $(".appForm:not(" + thisForm + ")").hide();
+
+    });
+
+    $(".selectType").click(function() {
+        $($(this).siblings()).prop("checked", !$(this).siblings().prop("checked"));
+
+        if($(this).siblings().prop("checked")) {
+            $(this).removeClass("btn-outline-danger");
+            $(this).addClass("btn-danger");
+        }
+
+        else {
+            $(this).removeClass("btn-danger");
+            $(this).addClass("btn-outline-danger");
+        }
+
     });
 
 
