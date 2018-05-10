@@ -14,28 +14,31 @@
             <div class="mx-auto bg-light w-40 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
                 <h3 class="text-center font-rubik mb-3">Book Appointment</h3>
 
-                <form>
-                    <ul class="nav justify-content-around mt-3">
-                        <li class="nav-item">
-                            <a class="nav-link bg-primary text-light rounded" data-toggle="tab" href="#individual"><h6 class="mb-0">Individual</h6></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bg-primary text-light rounded" data-toggle="tab" href="#group"><h6 class="mb-0">Group</h6></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bg-primary text-light rounded" data-toggle="tab" href="#team"><h6 class="mb-0">Team</h6></a>
-                        </li>
-                    </ul>
+                <form class="p-0">
+                    <div class="row w-100 text-center mx-auto">
+                        <div class="col-sm-4">
+                            <li class="nav-item d-inline-block">
+                                <a class="showForm nav-link bg-primary text-light rounded" id="individual">Individual</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4">
+                            <li class="nav-item d-inline-block">
+                                <a class="showForm nav-link bg-primary text-light rounded" id="group">Group</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4">
+                            <li class="nav-item d-inline-block">
+                                <a class="showForm nav-link bg-primary text-light rounded" id="team">Team</a>
+                            </li>
+                        </div>
+                    </div>
 
                     <hr/>
 
-                    <div class="tab-content mt-3">
-                        <div class="tab-pane container text-center fade show active" id="individual">
-                            <div class="d-flex justify-content-around">
-                                <button type="button" class="btn btn-sm btn-outline-danger">Blood</button>
-                                <button type="button" class="btn btn-sm btn-outline-danger">Bone</button>
-                                <button type="button" class="btn btn-sm btn-outline-danger">Plasma</button>
-                            </div>
+                    <div class="tab-content p-0 mt-3">
+                        <div class="appForm tab-pane container text-center hidden p-0" id="individualForm">
+
+                            <%- include('./partials/donationtype') %>
 
                             <hr/>
 
@@ -79,12 +82,9 @@
 
                             <button type="submit" class="btn btn-primary ">Book Appointment</button>
                         </div>
-                        <div class="tab-pane container fade text-center" id="group">
-                            <div class="d-flex justify-content-around">
-                                <button type="button" class="btn btn-sm btn-outline-danger">Blood</button>
-                                <button type="button" class="btn btn-sm btn-outline-danger">Bone</button>
-                                <button type="button" class="btn btn-sm btn-outline-danger">Plasma</button>
-                            </div>
+                        <div class="appForm tab-pane container hidden p-0 text-center" id="groupForm">
+
+                            <%- include('./partials/donationtype') %>
 
                             <hr/>
 
@@ -154,12 +154,9 @@
 
                             <button type="submit" class="btn btn-primary">Book Appointment</button>
                         </div>
-                        <div class="tab-pane container fade text-center" id="team">
-                            <div class="d-flex justify-content-around">
-                                <button type="button" class="btn btn-sm btn-outline-danger">Blood</button>
-                                <button type="button" class="btn btn-sm btn-outline-danger">Bone</button>
-                                <button type="button" class="btn btn-sm btn-outline-danger">Plasma</button>
-                            </div>
+                        <div class="appForm tab-pane container hidden p-0 text-center" id="teamForm">
+
+                            <%- include('./partials/donationtype') %>
 
                             <hr/>
 
