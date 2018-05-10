@@ -553,6 +553,18 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: center;
     flex-direction: row; }
 
+
+.keyBox {
+display: inline-block;
+height: 11px;
+margin-right: 2px;
+width: 11px;
+}
+
+.edit {
+    cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */
 #Footer{
     text-align: center;
