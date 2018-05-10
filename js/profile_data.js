@@ -1,5 +1,5 @@
-var activeID = "1234567";
-var activeLongID = "000000000000000001234567";
+var activeID = "";
+var activeLongID = "";
 
 // DOM Ready
 $(document).ready(function() {
@@ -8,6 +8,24 @@ $(document).ready(function() {
     processDonationData();
 });
 
+
+$('#submitlandingpage').on('click', enterSite);
+
+function enterSite() {
+// checks if the sign in page password is equal to one from the database
+    var inputID = document.getElementById("donornumlandingpage").value;
+    $.getJSON( '/api/00000000000000000' + inputID, function(data) {
+        var password_str = data.password;
+        alert(document.getElementById($("#passwordlandingpage").val()));
+        if (password_str == $("#passwordlandingpage").val()){
+            activeMemberID = "00000000000000000" + inputID;
+            alert("paswords mattch borooossss");
+        }
+        else {
+            alert("Password or Donor Number is incorrect. Please try again.")
+        }
+    });
+}
 
 //Create HTML snippets
 function processProfileData(inputID) {

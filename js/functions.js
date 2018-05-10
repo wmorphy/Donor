@@ -68,7 +68,7 @@ function createGraph() {
     });
 }
 
-<<<<<<< HEAD
+<<<<<<< HEAD;
 function bookedAlert() {
     alert("Appointment Booked!");
 }
@@ -76,7 +76,7 @@ function bookedAlert() {
 
 
 
-=======
+=======;
 var notif = [
 
     {Title: "DonorSpace",
@@ -161,13 +161,12 @@ var notif = [
 //Prev Donations
 function startPreviousDonations() {
     for (var i = 0; i < 10 ; i++) {
-        html = '<tr>'
-        html += '<td>08/05/2018</td>'
-        html += '<td>Melbourne Central</td>'
-        html += '<td class="text-success font-weight-bold text-center">&#10004;</td>'
-        html += '<td class="text-danger font-weight-bold text-center">&times;</td>'
-        html += '<td class="text-danger font-weight-bold text-center">&times;</td></tr>'
+        html = '<tr>';
+        html += '<td>08/05/2018</td>';
+        html += '<td>Melbourne Central</td>';
+        html += '<td class="text-success font-weight-bold text-center">&#10004;</td>';
+        html += '<td class="text-danger font-weight-bold text-center">&times;</td>';
+        html += '<td class="text-danger font-weight-bold text-center">&times;</td></tr>';
         $("#prevDon").append(html);
     }
-};
->>>>>>> dab5ffcff902d47da777d00140ef3c88eb73f8b9
+}
