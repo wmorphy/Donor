@@ -3,7 +3,7 @@ var Members = mongoose.model('members');
 var Notifications = mongoose.model('notifications');
 var Donations = mongoose.model('donations');
 var ActiveUserIDs = mongoose.model('activeuserids');
-
+var Teams = mongoose.model('teams');
 
 var createMember = function(req,res){
 
@@ -32,7 +32,15 @@ var createMember = function(req,res){
         }
     });
 };
-
+var findAllTeams = function(req,res){
+    Teams.find(function(err,teams){
+        if(!err){
+            res.send(teams);
+        }else{
+            res.sendStatus(404);
+        }
+    });
+}
 
 
 var findActiveUserIDs = function(req,res){
@@ -99,3 +107,4 @@ module.exports.findDonations = findDonations;
 module.exports.findProfile = findProfile;
 module.exports.findActiveUserIDs = findActiveUserIDs;
 module.exports.updateActiveUserID = updateActiveUserID;
+module.exports.findAllTeams = findAllTeams;

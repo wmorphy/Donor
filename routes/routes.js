@@ -40,6 +40,7 @@ router.get('/api/:id', restreqs.findProfile);
 router.get('/api-notifs', restreqs.findAllNotifs);
 // find donations
 router.get('/api-donations', restreqs.findDonations);
+router.get('/api-teams', restreqs.findAllTeams);
 
 
 router.get('/api-activeuserid/:id', restreqs.updateActiveUserID);

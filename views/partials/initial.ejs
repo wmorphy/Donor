@@ -20,6 +20,13 @@
 
 <body>
 
-<div class="container-fluid p-0 mx-auto scroll" >
+<div class="container-fluid p-0 mx-auto" >
 
-    <%= %>
+    <% if (status == "member") { %>
+        <%- include('header') %>
+    <% } else if (status == "admin") { %>
+        <%- include('header') %>
+    <% } else { %>
+        <%- include('header') %>
+    <% } %>
+</div>

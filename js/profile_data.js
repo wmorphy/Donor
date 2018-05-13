@@ -17,7 +17,9 @@ $(document).ready(function() {
         updateProfle();
 
     }
-
+    if (pathname == "/teams") {
+        processTeamData();
+    }
 
     //EDIT MEMBER
 
@@ -82,6 +84,33 @@ function processProfileData() {
 
 
 
+function processTeamData() {
+
+    var userdoc = $.getJSON('/api-activeuserid', function(doc){
+        var userid = doc.donorID;
+
+        // jQuery AJAX call for JSON
+        $.getJSON( '/api-teams', function(data) {
+
+            $.each(data, function(){
+                //if (this.members.contains(userid)) {
+                html = '<tr>'
+                html += '<td>'+this.teamID+'</td>'
+                html += '<td>'+ this.teamname +'</td>'
+
+                html = '<div class="media mb-1 px-3 pt-2">'
+                html += '<img src="img/dabois.png" class="mr-4" width="50px">'
+                html += '<div class="media-body align-self-center">'
+                html += '<h6 class="mb-1">'+this.teamname+'</h6>'
+                html += '<p class="mb-0"><img src="img/torso.png" width="16px">'+this.teamID+'</p>'
+                html += '</div> </div>'
+                // append the previous donations to the div prevDon
+                $("#allteams").append(html);
+                // }
+            })
+        });
+    });
+};
 
 
 $('#submitlandingpage').on('click', enterSite);
