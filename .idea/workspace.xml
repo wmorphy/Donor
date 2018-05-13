@@ -2,14 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eef0d646-9c99-4bf7-934f-d3ded1c39d60" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Models/teams.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Models/db.js" afterPath="$PROJECT_DIR$/Models/db.js" />
-      <change beforePath="$PROJECT_DIR$/controllers/restreqs.js" afterPath="$PROJECT_DIR$/controllers/restreqs.js" />
-      <change beforePath="$PROJECT_DIR$/js/profile_data.js" afterPath="$PROJECT_DIR$/js/profile_data.js" />
-      <change beforePath="$PROJECT_DIR$/routes/routes.js" afterPath="$PROJECT_DIR$/routes/routes.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/old/favicon.png" />
+      <change beforePath="$PROJECT_DIR$/controllers/controller.js" afterPath="$PROJECT_DIR$/controllers/controller.js" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/img/Facebook-color.svg" afterPath="$PROJECT_DIR$/img/old/Facebook-color.svg" />
+      <change beforePath="$PROJECT_DIR$/img/Twitter-color.svg" afterPath="$PROJECT_DIR$/img/old/Twitter-color.svg" />
+      <change beforePath="$PROJECT_DIR$/img/addWhite.png" afterPath="$PROJECT_DIR$/img/old/addWhite.png" />
+      <change beforePath="$PROJECT_DIR$/img/awardWhite.png" afterPath="$PROJECT_DIR$/img/old/awardWhite.png" />
+      <change beforePath="$PROJECT_DIR$/img/bg.jpg" afterPath="$PROJECT_DIR$/img/old/bg.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/bg2.png" afterPath="$PROJECT_DIR$/img/old/bg2.png" />
+      <change beforePath="$PROJECT_DIR$/img/bg3.jpg" afterPath="$PROJECT_DIR$/img/old/bg3.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/bg3hq.jpg" afterPath="$PROJECT_DIR$/img/old/bg3hq.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/bgcrop.jpg" afterPath="$PROJECT_DIR$/img/old/bgcrop.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/graphWhite.png" afterPath="$PROJECT_DIR$/img/old/graphWhite.png" />
+      <change beforePath="$PROJECT_DIR$/img/heartfull.png" afterPath="$PROJECT_DIR$/img/old/heartfull.png" />
+      <change beforePath="$PROJECT_DIR$/img/img/unimelb.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" afterPath="$PROJECT_DIR$/img/old/logo.png" />
+      <change beforePath="$PROJECT_DIR$/img/menu.png" afterPath="$PROJECT_DIR$/img/old/menu.png" />
+      <change beforePath="$PROJECT_DIR$/img/menu2.png" afterPath="$PROJECT_DIR$/img/old/menu2.png" />
+      <change beforePath="$PROJECT_DIR$/img/niels.png" afterPath="$PROJECT_DIR$/img/old/niels.png" />
+      <change beforePath="$PROJECT_DIR$/img/noicee.png" afterPath="$PROJECT_DIR$/img/old/noicee.png" />
+      <change beforePath="$PROJECT_DIR$/img/noiceecredit.png" afterPath="$PROJECT_DIR$/img/old/noiceecredit.png" />
+      <change beforePath="$PROJECT_DIR$/img/teamWhite.png" afterPath="$PROJECT_DIR$/img/old/teamWhite.png" />
+      <change beforePath="$PROJECT_DIR$/js/functions.js" afterPath="$PROJECT_DIR$/js/functions.js" />
+      <change beforePath="$PROJECT_DIR$/views/appointment.ejs" afterPath="$PROJECT_DIR$/views/appointment.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/news.ejs" afterPath="$PROJECT_DIR$/views/news.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/partials/donationtype.ejs" afterPath="$PROJECT_DIR$/views/partials/donationtype.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/partials/emptyteam.ejs" afterPath="$PROJECT_DIR$/views/partials/emptyteam.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" afterPath="$PROJECT_DIR$/views/partials/header.ejs" />
       <change beforePath="$PROJECT_DIR$/views/partials/initial.ejs" afterPath="$PROJECT_DIR$/views/partials/initial.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/teams.ejs" afterPath="$PROJECT_DIR$/views/teams.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/partials/placeholderteam.ejs" afterPath="$PROJECT_DIR$/views/partials/placeholderteam.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/profile.ejs" afterPath="$PROJECT_DIR$/views/profile.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/teamprofile.ejs" afterPath="$PROJECT_DIR$/views/teamprofile.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -83,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teams.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teams.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/teams.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
+            <state relative-caret-position="-136">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -99,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/views/teamprofile.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -118,21 +143,20 @@
       <file leaf-file-name="profile.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/profile.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            <state relative-caret-position="90">
+              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="initial.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="initial.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/partials/initial.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="132">
+              <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -210,7 +234,6 @@
         <option value="$PROJECT_DIR$/Models/activeuserids.js" />
         <option value="$PROJECT_DIR$/views/signin.ejs" />
         <option value="$PROJECT_DIR$/views/profile.ejs" />
-        <option value="$PROJECT_DIR$/views/partials/initial.ejs" />
         <option value="$PROJECT_DIR$/js/profile_data.js" />
         <option value="$PROJECT_DIR$/Models/teams.js" />
         <option value="$PROJECT_DIR$/controllers/restreqs.js" />
@@ -218,6 +241,7 @@
         <option value="$PROJECT_DIR$/routes/routes.js" />
         <option value="$PROJECT_DIR$/views/signIn.html" />
         <option value="$PROJECT_DIR$/views/teams.ejs" />
+        <option value="$PROJECT_DIR$/views/partials/initial.ejs" />
       </list>
     </option>
   </component>
@@ -382,12 +406,12 @@
       <workItem from="1526224291414" duration="248000" />
       <workItem from="1526225281795" duration="442000" />
       <workItem from="1526226766410" duration="192000" />
-      <workItem from="1526227176879" duration="15647000" />
+      <workItem from="1526227176879" duration="15713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110509000" />
+    <option name="totallyTimeSpent" value="110575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,6 +424,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="23" width="1421" height="807" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946298" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -409,7 +434,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280116" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280116" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -669,20 +694,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/initial.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/profile.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="90">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -749,18 +765,26 @@
     <entry file="file://$PROJECT_DIR$/views/teamprofile.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/teams.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
+        <state relative-caret-position="-136">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/initial.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>

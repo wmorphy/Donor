@@ -1,6 +1,6 @@
 <%- include('./partials/initial', {title: 'Book an Appointment', status: 'member'}) %>
 
-    <div class="mx-auto bg-light w-40 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
+    <div class="mx-auto bg-light w-50 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
         <h3 class="text-center font-rubik mb-3">Book Appointment</h3>
 
         <hr/>
@@ -8,7 +8,7 @@
         <form class="p-0">
             <div class="row w-100 text-center mx-auto">
                 <div class="col-sm-4">
-                    <li class="nav-item d-inline-block">
+                    <li class="nav-item d-inline-block ml-5">
                         <a class="showForm nav-link bg-primary text-light rounded" id="individual">Individual</a>
                     </li>
                 </div>
@@ -18,7 +18,7 @@
                     </li>
                 </div>
                 <div class="col-sm-4">
-                    <li class="nav-item d-inline-block">
+                    <li class="nav-item d-inline-block mr-5">
                         <a class="showForm nav-link bg-primary text-light rounded" id="team">Team</a>
                     </li>
                 </div>
@@ -84,17 +84,36 @@
                         <div class="mx-auto">
                             <p class="mb-1 font-weight-bold small">(by donor number or email)</p>
                             <input type="text" class="form-control" id="usr" size=30 required>
+                            <button class="btn btn-outline-primary" type="button">Invite</button>
                         </div>
                     </div>
 
                     <h6 class="font-weight-bold">Invited</h6>
                     <div>
-                        <div style="height: 300px; overflow-y: scroll;" class="text-left px-2 border rounded d-inline-block">
+                        <div style="min-width: 300px; height: 300px; overflow-y: scroll;" class="text-left px-2 border rounded d-inline-block">
                             <table class="table table-borderless">
                                 <tbody>
                                     <tr>
                                         <td class="pl-0">
-                                            <h6>Addison Scott-Fleming <span class="text-danger font-weight-bold">&times;</span></h6>
+                                            <h6>Addison Scott-Fleming <span class="text-danger font-weight-bold deleteEntry">&times;</span></h6>
+                                            <p class="small mb-0">addisonsf.personal@gmail.com | 8008135</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-0">
+                                            <h6>Addison Scott-Fleming <span class="text-danger font-weight-bold deleteEntry">&times;</span></h6>
+                                            <p class="small mb-0">addisonsf.personal@gmail.com | 8008135</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-0">
+                                            <h6>Addison Scott-Fleming <span class="text-danger font-weight-bold deleteEntry">&times;</span></h6>
+                                            <p class="small mb-0">addisonsf.personal@gmail.com | 8008135</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-0">
+                                            <h6>Addison Scott-Fleming <span class="text-danger font-weight-bold deleteEntry">&times;</span></h6>
                                             <p class="small mb-0">addisonsf.personal@gmail.com | 8008135</p>
                                         </td>
                                     </tr>
