@@ -5,9 +5,15 @@ const fetchLanding = (req, res) => {
 const fetchHome = (req, res) => {
     res.render("news");
 };
+
 const fetchProfile = (req, res) => {
     res.render("profile");
 };
+
+
+const fetchTeamProfile = (req, res) => {
+    res.render("teamprofile");
+}
 
 const fetchTeams = (req, res) => {
     res.render("teams");
@@ -37,4 +43,5 @@ const fetchBookApp = (req, res) => {
 
 module.exports = {
     fetchLanding, fetchHome, fetchProfile, fetchTeam, fetchTeams, fetchBookApp, fetchSignIn, fetchSignUp, fetchAbout, fetchContact
-};
+};};};    fetchLanding, fetchHome, fetchProfile, fetchTeamProfile, fetchTeam, fetchTeams, fetchBookApp, fetchSignIn, fetchSignUp, fetchAbout, fetchContact
+}

@@ -1,7 +1,3 @@
-html {
-    overflow: hidden;
-}
-
 body {
     /* Background colour in case image doesn't load */
     background-color: #ff5a5a;
@@ -15,8 +11,6 @@ body {
 
     height: 100%;
     width: 100%;
-
-    overflow: auto;
 }
 
 /* Turn off the number input spinners */
@@ -50,6 +44,11 @@ input[type=number]::-webkit-outer-spin-button {
     width: 11px;
 }
 
+<<<<<<< HEAD
 .scroll{
     overflow: auto;
+=======
+.deleteEntry:hover {
+    cursor: pointer;
+>>>>>>> origin/addison
 }
