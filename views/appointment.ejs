@@ -1,221 +1,212 @@
-<!DOCTYPE html>
+<%- include('./partials/initial', {title: 'Book an Appointment', status: 'member'}) %>
 
-<html lang="en">
-    <head>
-        <%- include('./partials/script') %>
-    </head>
+    <div class="mx-auto bg-light w-40 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
+        <h3 class="text-center font-rubik mb-3">Book Appointment</h3>
 
-    <body>
+        <hr/>
 
-        <div class="container-fluid container-nomargin">
-            <%- include('./partials/Header') %>
+        <form class="p-0">
+            <div class="row w-100 text-center mx-auto">
+                <div class="col-sm-4">
+                    <li class="nav-item d-inline-block">
+                        <a class="showForm nav-link bg-primary text-light rounded" id="individual">Individual</a>
+                    </li>
+                </div>
+                <div class="col-sm-4">
+                    <li class="nav-item d-inline-block">
+                        <a class="showForm nav-link bg-primary text-light rounded" id="group">Group</a>
+                    </li>
+                </div>
+                <div class="col-sm-4">
+                    <li class="nav-item d-inline-block">
+                        <a class="showForm nav-link bg-primary text-light rounded" id="team">Team</a>
+                    </li>
+                </div>
+            </div>
 
+            <hr/>
 
-            <div class="mx-auto bg-light w-40 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
-                <h3 class="text-center font-rubik mb-3">Book Appointment</h3>
+            <div class="tab-content p-0 mt-3">
+                <div class="appForm tab-pane container text-center hidden p-0" id="individualForm">
 
-                <form class="p-0">
-                    <div class="row w-100 text-center mx-auto">
-                        <div class="col-sm-4">
-                            <li class="nav-item d-inline-block">
-                                <a class="showForm nav-link bg-primary text-light rounded" id="individual">Individual</a>
-                            </li>
+                    <%- include('./partials/donationtype') %>
+
+                    <hr/>
+
+                    <p class="ml-1 mb-1 font-weight-bold">Date <span class="text-danger">*</span></p>
+                    <div class="form-group form-inline mb-3">
+                        <div class="input-group date mx-auto" data-provide="datepicker">
+                            <div class="input-group-addon">
+                            </div>
+
+                            <input type="text" class="form-control rounded" size=10>
                         </div>
-                        <div class="col-sm-4">
-                            <li class="nav-item d-inline-block">
-                                <a class="showForm nav-link bg-primary text-light rounded" id="group">Group</a>
-                            </li>
+                    </div>
+
+                    <div class="form-group form-inline mb-3">
+                        <div class="mx-auto">
+                            <p class="ml-1 mb-1 font-weight-bold">Time <span class="text-danger">*</span></p>
+                            <select class="custom-select" required>
+                                <option selected disabled hidden></option>
+                                <option value="1">9:00 am</option>
+                                <option value="2">9:30 am</option>
+                                <option value="3">10:00 am</option>
+                                <option value="4">10:30 am</option>
+                                <option value="5">11:00 am</option>
+                                <option value="6" disabled>11:30 am</option>
+                                <option value="7">12:00 pm</option>
+                            </select>
                         </div>
-                        <div class="col-sm-4">
-                            <li class="nav-item d-inline-block">
-                                <a class="showForm nav-link bg-primary text-light rounded" id="team">Team</a>
-                            </li>
+                    </div>
+
+                    <div class="form-group form-inline mb-3">
+                        <div class="mx-auto">
+                            <p class="ml-1 mb-1 font-weight-bold">Location <span class="text-danger">*</span></p>
+                            <select class="custom-select" required>
+                                <option selected disabled hidden></option>
+                                <option value="1">Melbourne Central</option>
+                            </select>
                         </div>
                     </div>
 
                     <hr/>
 
-                    <div class="tab-content p-0 mt-3">
-                        <div class="appForm tab-pane container text-center hidden p-0" id="individualForm">
+                    <button type="submit" class="btn btn-primary ">Book Appointment</button>
+                </div>
+                <div class="appForm tab-pane container hidden p-0 text-center" id="groupForm">
 
-                            <%- include('./partials/donationtype') %>
+                    <%- include('./partials/donationtype') %>
 
-                            <hr/>
+                    <hr/>
 
-                            <p class="ml-1 mb-1 font-weight-bold">Date <span class="text-danger">*</span></p>
-                            <div class="form-group form-inline mb-3">
-                                <div class="input-group date mx-auto" data-provide="datepicker">
-                                    <div class="input-group-addon">
-                                    </div>
-
-                                    <input type="text" class="form-control rounded" size=10>
-                                </div>
-                            </div>
-
-                            <div class="form-group form-inline mb-3">
-                                <div class="mx-auto">
-                                    <p class="ml-1 mb-1 font-weight-bold">Time <span class="text-danger">*</span></p>
-                                    <select class="custom-select" required>
-                                        <option selected disabled hidden></option>
-                                        <option value="1">9:00 am</option>
-                                        <option value="2">9:30 am</option>
-                                        <option value="3">10:00 am</option>
-                                        <option value="4">10:30 am</option>
-                                        <option value="5">11:00 am</option>
-                                        <option value="6" disabled>11:30 am</option>
-                                        <option value="7">12:00 pm</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group form-inline mb-3">
-                                <div class="mx-auto">
-                                    <p class="ml-1 mb-1 font-weight-bold">Location <span class="text-danger">*</span></p>
-                                    <select class="custom-select" required>
-                                        <option selected disabled hidden></option>
-                                        <option value="1">Melbourne Central</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <hr/>
-
-                            <button type="submit" class="btn btn-primary ">Book Appointment</button>
-                        </div>
-                        <div class="appForm tab-pane container hidden p-0 text-center" id="groupForm">
-
-                            <%- include('./partials/donationtype') %>
-
-                            <hr/>
-
-                            <h6 class="mt-2 mb-0 font-weight-bold">Invite Friends</h6>
-                            <div class="form-group form-inline mb-3">
-                                <div class="mx-auto">
-                                    <p class="mb-1 font-weight-bold small">(by donor number or email)</p>
-                                    <input type="text" class="form-control" id="usr" size=30 required>
-                                </div>
-                            </div>
-
-                            <h6 class="font-weight-bold">Invited</h6>
-                            <div>
-                                <div style="height: 300px; overflow-y: scroll;" class="text-left px-2 border rounded d-inline-block">
-                                    <table class="table table-borderless">
-                                        <tbody>
-                                            <tr>
-                                                <td class="pl-0">
-                                                    <h6>Addison Scott-Fleming <span class="text-danger font-weight-bold">&times;</span></h6>
-                                                    <p class="small mb-0">addisonsf.personal@gmail.com | 8008135</p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <hr/>
-
-                            <p class="ml-1 mb-1 font-weight-bold">Date <span class="text-danger">*</span></p>
-                            <div class="form-group form-inline mb-3">
-                                <div class="input-group date mx-auto" data-provide="datepicker">
-                                    <div class="input-group-addon">
-                                    </div>
-
-                                    <input type="text" class="form-control rounded" size=10>
-                                </div>
-                            </div>
-
-                            <div class="form-group form-inline mb-3">
-                                <div class="mx-auto text-center">
-                                    <p class="ml-1 mb-1 font-weight-bold">Time <span class="text-danger">*</span></p>
-                                    <select class="custom-select" required>
-                                        <option selected disabled hidden></option>
-                                        <option value="1">9:00 am</option>
-                                        <option value="2">9:30 am</option>
-                                        <option value="3">10:00 am</option>
-                                        <option value="4">10:30 am</option>
-                                        <option value="5">11:00 am</option>
-                                        <option value="6" disabled>11:30 am</option>
-                                        <option value="7">12:00 pm</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group form-inline mb-3">
-                                <div class="mx-auto text-center">
-                                    <p class="ml-1 mb-1 font-weight-bold">Location <span class="text-danger">*</span></p>
-                                    <select class="custom-select" required>
-                                        <option selected disabled hidden></option>
-                                        <option value="1">Melbourne Central</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <hr/>
-
-                            <button type="submit" class="btn btn-primary">Book Appointment</button>
-                        </div>
-                        <div class="appForm tab-pane container hidden p-0 text-center" id="teamForm">
-
-                            <%- include('./partials/donationtype') %>
-
-                            <hr/>
-
-                            <h6 class="mt-2 mb-1 font-weight-bold">Choose Team <span class="text-danger">*</span></h6>
-                            <div class="form-group form-inline mb-3">
-                                <div class="mx-auto">
-                                    <select class="custom-select" required>
-                                        <option selected disabled hidden></option>
-                                        <option value="1">Noic.ee Solutions</option>
-                                        <option value="2">University of Melbourne</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <hr/>
-
-                            <p class="ml-1 mb-1 font-weight-bold">Date <span class="text-danger">*</span></p>
-                            <div class="form-group form-inline mb-3">
-                                <div class="input-group date mx-auto" data-provide="datepicker">
-                                    <div class="input-group-addon">
-                                    </div>
-
-                                    <input type="text" class="form-control rounded" size=10>
-                                </div>
-                            </div>
-
-                            <div class="form-group form-inline mb-3">
-                                <div class="mx-auto">
-                                    <p class="ml-1 mb-1 font-weight-bold">Time <span class="text-danger">*</span></p>
-                                    <select class="custom-select" required>
-                                        <option selected disabled hidden></option>
-                                        <option value="1">9:00 am</option>
-                                        <option value="2">9:30 am</option>
-                                        <option value="3">10:00 am</option>
-                                        <option value="4">10:30 am</option>
-                                        <option value="5">11:00 am</option>
-                                        <option value="6" disabled>11:30 am</option>
-                                        <option value="7">12:00 pm</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group form-inline mb-3">
-                                <div class="mx-auto text-center">
-                                    <p class="ml-1 mb-1 font-weight-bold">Location <span class="text-danger">*</span></p>
-                                    <select class="custom-select" required>
-                                        <option selected disabled hidden></option>
-                                        <option value="1">Melbourne Central</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <hr/>
-
-                            <button type="submit" id="book" class="btn btn-primary" onclick="alert('hello')" >Book Appointment</button>
+                    <h6 class="mt-2 mb-0 font-weight-bold">Invite Friends</h6>
+                    <div class="form-group form-inline mb-3">
+                        <div class="mx-auto">
+                            <p class="mb-1 font-weight-bold small">(by donor number or email)</p>
+                            <input type="text" class="form-control" id="usr" size=30 required>
                         </div>
                     </div>
 
+                    <h6 class="font-weight-bold">Invited</h6>
+                    <div>
+                        <div style="height: 300px; overflow-y: scroll;" class="text-left px-2 border rounded d-inline-block">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <td class="pl-0">
+                                            <h6>Addison Scott-Fleming <span class="text-danger font-weight-bold">&times;</span></h6>
+                                            <p class="small mb-0">addisonsf.personal@gmail.com | 8008135</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-        </div>
-    </body>
-</html>
+                    <hr/>
+
+                    <p class="ml-1 mb-1 font-weight-bold">Date <span class="text-danger">*</span></p>
+                    <div class="form-group form-inline mb-3">
+                        <div class="input-group date mx-auto" data-provide="datepicker">
+                            <div class="input-group-addon">
+                            </div>
+
+                            <input type="text" class="form-control rounded" size=10>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-inline mb-3">
+                        <div class="mx-auto text-center">
+                            <p class="ml-1 mb-1 font-weight-bold">Time <span class="text-danger">*</span></p>
+                            <select class="custom-select" required>
+                                <option selected disabled hidden></option>
+                                <option value="1">9:00 am</option>
+                                <option value="2">9:30 am</option>
+                                <option value="3">10:00 am</option>
+                                <option value="4">10:30 am</option>
+                                <option value="5">11:00 am</option>
+                                <option value="6" disabled>11:30 am</option>
+                                <option value="7">12:00 pm</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-inline mb-3">
+                        <div class="mx-auto text-center">
+                            <p class="ml-1 mb-1 font-weight-bold">Location <span class="text-danger">*</span></p>
+                            <select class="custom-select" required>
+                                <option selected disabled hidden></option>
+                                <option value="1">Melbourne Central</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                    <button type="submit" class="btn btn-primary">Book Appointment</button>
+                </div>
+                <div class="appForm tab-pane container hidden p-0 text-center" id="teamForm">
+
+                    <%- include('./partials/donationtype') %>
+
+                    <hr/>
+
+                    <h6 class="mt-2 mb-1 font-weight-bold">Choose Team <span class="text-danger">*</span></h6>
+                    <div class="form-group form-inline mb-3">
+                        <div class="mx-auto">
+                            <select class="custom-select" required>
+                                <option selected disabled hidden></option>
+                                <option value="1">Noic.ee Solutions</option>
+                                <option value="2">University of Melbourne</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                    <p class="ml-1 mb-1 font-weight-bold">Date <span class="text-danger">*</span></p>
+                    <div class="form-group form-inline mb-3">
+                        <div class="input-group date mx-auto" data-provide="datepicker">
+                            <div class="input-group-addon">
+                            </div>
+
+                            <input type="text" class="form-control rounded" size=10>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-inline mb-3">
+                        <div class="mx-auto">
+                            <p class="ml-1 mb-1 font-weight-bold">Time <span class="text-danger">*</span></p>
+                            <select class="custom-select" required>
+                                <option selected disabled hidden></option>
+                                <option value="1">9:00 am</option>
+                                <option value="2">9:30 am</option>
+                                <option value="3">10:00 am</option>
+                                <option value="4">10:30 am</option>
+                                <option value="5">11:00 am</option>
+                                <option value="6" disabled>11:30 am</option>
+                                <option value="7">12:00 pm</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-inline mb-3">
+                        <div class="mx-auto text-center">
+                            <p class="ml-1 mb-1 font-weight-bold">Location <span class="text-danger">*</span></p>
+                            <select class="custom-select" required>
+                                <option selected disabled hidden></option>
+                                <option value="1">Melbourne Central</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                    <button type="submit" id="book" class="btn btn-primary" onclick="alert('hello')" >Book Appointment</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+<%- include('./partials/final') %>

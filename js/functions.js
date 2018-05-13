@@ -91,48 +91,9 @@ function createGraph() {
     });
 }
 
-<<<<<<< HEAD;
 function bookedAlert() {
     alert("Appointment Booked!");
-}
+};
 
 
 
-//
-//
-//
-// function startNotifications() {
-//     $.each(data, function() {
-//         var html = '<div class="media px-2 pt-1">';
-//         html += '<img src=' + this.imgsource + 'alt="Add" class="mr-3 rounded" style="width:50px;">'
-//         html += '<div class="media-body">'
-//         html += '<h4 class="mb-1"></h4>'
-//         html += '<h5><small><i>2 hours ago</i></small></h5>'
-//         html += '<p>'+ this.heading +'</p></div>' +this.content +'</div>'
-//         $("#append").append(html);
-//     });
-//
-// };
-//
-//
-//
-// function numHours(time){
-//
-// }
-
-
-
-
-
-//Prev Donations
-function startPreviousDonations() {
-    for (var i = 0; i < 10 ; i++) {
-        html = '<tr>';
-        html += '<td>08/05/2018</td>';
-        html += '<td>Melbourne Central</td>';
-        html += '<td class="text-success font-weight-bold text-center">&#10004;</td>';
-        html += '<td class="text-danger font-weight-bold text-center">&times;</td>';
-        html += '<td class="text-danger font-weight-bold text-center">&times;</td></tr>';
-        $("#prevDon").append(html);
-    }
-}

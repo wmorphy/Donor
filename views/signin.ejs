@@ -1,50 +1,41 @@
-<!DOCTYPE html>
+<%- include('./partials/initial', {title: 'Sign In', status: 'guest'}) %>
 
-<html lang="en">
-    <head>
-        <%- include('./partials/script') %>
-    </head>
+    <div class="mx-auto bg-light w-40 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
+        <form>
 
-        <div class="container-fluid container-nomargin">
-            <%- include('./partials/headerguest') %>
+            <h4 class="font-rubik mb-3">User Login</h4>
 
-            <div class="mx-auto bg-light w-40 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
-                <form>
+            <hr/>
 
-                    <h4 class="font-rubik mb-3">User Login</h4>
-
-                    <hr/>
-
-                    <div class="form-group form-inline mb-3">
-                        <div>
-                            <p class="ml-1 mb-1 font-weight-bold ">DonorNum <span class="text-danger">*</span></p>
-                            <input type="text" class="form-control" id = "donornumlandingpage" size=30 required>
-                        </div>
-                    </div>
-
-                    <div class="form-group form-inline  mb-3 ">
-                        <div>
-                            <p class="ml-1 mb-1 font-weight-bold">Password <span class="text-danger">*</span></p>
-                            <input type="text" class="form-control" id = "passwordlandingpage" size=30 required>
-                        </div>
-                    </div>
-
-                <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
-                    <label class="custom-control-label" for="customControlValidation1">Remember me?</label>
+            <div class="form-group form-inline mb-3">
+                <div>
+                    <p class="ml-1 mb-1 font-weight-bold ">DonorNum <span class="text-danger">*</span></p>
+                    <input type="text" class="form-control" id = "donornumlandingpage" size=30 required>
                 </div>
+            </div>
 
-                    <ul class="nav nav-pills flex-column">
-                        <li class="nav-item mr-auto">
-                            <a class="nav-link active bg-primary" id = "submitlandingpage" onclick="enterSite()" >Login</a>
-                        </li>
+            <div class="form-group form-inline  mb-3 ">
+                <div>
+                    <p class="ml-1 mb-1 font-weight-bold">Password <span class="text-danger">*</span></p>
+                    <input type="text" class="form-control" id = "passwordlandingpage" size=30 required>
+                </div>
+            </div>
 
-                        <li class="nav-item mr-auto">
-                            <a class="nav-link small" href="#">Forgot your password?</a>
-                        </li>
-                    </ul>
-                </form>
+        <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+            <label class="custom-control-label" for="customControlValidation1">Remember me?</label>
         </div>
-        <!--<%- include('./partials/footer') %>-->
-    </body>
-</html>
+
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item mr-auto">
+                    <a class="nav-link active bg-primary" id = "submitlandingpage" onclick="enterSite()" >Login</a>
+                </li>
+
+                <li class="nav-item mr-auto">
+                    <a class="nav-link small" href="#">Forgot your password?</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+<%- include('./partials/final') %>

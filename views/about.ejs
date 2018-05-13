@@ -1,30 +1,12 @@
-<!DOCTYPE html>
+<%- include('./partials/initial', {title: 'About Us', status: 'guest'}) %>
 
-<html lang="en">
-<head>
-    <%- include('./partials/script') %>
-</head>
+    <div class="mx-auto bg-light w-50 ml-4 mt-4 px-4 py-4 shadow-sm" style="min-width: 400px;">
+        <h2 class="text-uppercase font-rubik ls-2 font-weight-bold mb-3 text-center">About Donorspace</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <h4 class="text-uppercase font-rubik font-weight-bold">Sub Heading</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h4 class="text-uppercase font-rubik font-weight-bold">Sub Heading</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
 
-<body>
-
-    <div class="container-fluid container-nomargin">
-        <%- include('./partials/headerguest') %>
-
-            <footer class="footer bg-light fixed-bottom">
-                Hello
-            </footer>
-
-            <div class="mx-auto bg-light w-50 ml-4 mt-4 px-3 py-3 shadow-sm" style="min-width: 400px;">
-                <h2 class="text-uppercase font-rubik ls-2"><strong>About</strong></h2>
-                <p>Blah</p>
-                <p>Blah</p>
-                <p>Blah</p>
-                <p>Blah</p>
-                <p>Blah</p>
-                <p>Blah</p>
-                <p>Blah</p>
-
-            </div>
-        </div>
-    </body>
-</html>
+<%- include('./partials/final') %>

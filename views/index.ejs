@@ -1,138 +1,64 @@
-<!DOCTYPE html>
+<%- include('./partials/initial', {title: 'Home', status: 'guest'}) %>
 
-<html lang="en">
-    <head>
-        <%- include('./partials/script') %>
-    </head>
+    <div class="mx-auto bg-light w-50 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
+        <h1 class="font-rubik text-center">Donating made <strong class="font-red">easy</strong>.</h1>
 
-    <body>
+        <div class="row px-3 mt-4">
+            <div class="media col-lg-6">
+                <img src="img/add.png" alt="Add" class="mr-3" style="width:30px;">
 
-        <div class="container-fluid container-nomargin">
-            <%- include('./partials/headerguest') %>
-
-            <div class="mx-auto bg-light w-50 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
-                <h1 class="font-rubik text-center">Donating made <strong class="font-red">easy</strong>.</h1>
-
-                <div class="row px-3 mt-4">
-                    <div class="media col-md-6">
-                        <img src="img/add.png" alt="Add" class="mr-3" style="width:30px;">
-
-                        <div class="media-body">
-                            <h5>Book all your appointments</h5>
-                            <p>Blood, Bone, Plasma. It doesn't matter what type, you can do it all easily here!</p>
-                        </div>
-                    </div>
-                    <div class="media col-md-6">
-                        <img src="img/graph.png" alt="Graph" class="mr-3" style="width:30px;">
-
-                        <div class="media-body">
-                            <h5>Get donation statistics</h5>
-                            <p>See how many lives you've saved, or litres of blood you've donated.</p>
-                        </div>
-                    </div>
+                <div class="media-body">
+                    <h5>Book all your appointments</h5>
+                    <p>Blood, Bone, Plasma. It doesn't matter what type, you can do it all easily here!</p>
                 </div>
+            </div>
+            <div class="media col-lg-6">
+                <img src="img/graph.png" alt="Graph" class="mr-3" style="width:30px;">
 
-                <div class="row px-3 mt-3">
-                    <div class="media col-md-6">
-                        <img src="img/team.png" alt="Friends" class="mr-3" style="width:30px;">
-
-                        <div class="media-body">
-                            <h5>Donate with your friends</h5>
-                            <p>It can be intimidating donating for the first time, why not bring friends along?</p>
-                        </div>
-                    </div>
-                    <div class="media col-md-6">
-                        <img src="img/award.png" alt="Award" class="mr-3" style="width:30px;">
-
-                        <div class="media-body">
-                            <h5>Compete with teams</h5>
-                            <p> Participate in events with your friends, work place or even your university!</p>
-                        </div>
-                    </div>
-
+                <div class="media-body">
+                    <h5>Get donation statistics</h5>
+                    <p>See how many lives you've saved, or litres of blood you've donated.</p>
                 </div>
+            </div>
+        </div>
 
-                <ul class="nav nav-pills">
-                    <li class="nav-item mx-auto">
-                        <h6 class="mb-0"><a class="nav-link active" href="about">Find out more</a></h6>
-                    </li>
-                </ul>
+        <div class="row px-3 mt-3">
+            <div class="media col-lg-6">
+                <img src="img/team.png" alt="Friends" class="mr-3" style="width:30px;">
 
-                <hr/>
+                <div class="media-body">
+                    <h5>Donate with your friends</h5>
+                    <p>It can be intimidating donating for the first time, why not bring friends along?</p>
+                </div>
+            </div>
+            <div class="media col-lg-6">
+                <img src="img/award.png" alt="Award" class="mr-3" style="width:30px;">
 
-                <h4 class="text-center mb-3">Want to get involved?</h4>
-                <ul class="nav nav-pills flex-column">
-                    <li class="nav-item mx-auto">
-                        <h5 class="mb-0"><a class="nav-link active bg-success" href="signup">Create an account</a></h5>
-                    </li>
-                    <li class="nav-item mx-auto">
-                        <a class="nav-link" href="signin">Already have an account?</a>
-                    </li>
-                </ul>
+                <div class="media-body">
+                    <h5>Compete with teams</h5>
+                    <p> Participate in events with your friends, work place or even your university!</p>
+                </div>
             </div>
 
-
-            <!-- <div class="bg-light w-100 mw-100 mt-5 px-3 py-5 shadow-sm">
-                <div class="row vertical-center">
-                    <div class="col-md-6">
-                        <div class="row h-50">
-                            <div class="col w-50">
-                                <div class="media p-2">
-                                    <img src="img/add.png" alt="Add" class="mr-3" style="width:30px;">
-
-                                    <div class="media-body">
-                                        <h5>Book all your appointments</h5>
-                                        <p>Blood, Bone, Plasma. It doesn't matter what type, you can do it all easily here!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col w-50">
-                                <div class="media p-2">
-                                    <img src="img/Graph.png" alt="Graph" class="mr-3" style="width:30px;">
-
-                                    <div class="media-body">
-                                        <h5>Get donation statistics</h5>
-                                        <p>See how many lives you've saved, or litres of blood you've donated.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row h-50">
-                            <div class="col w-50">
-                                <div class="media p-2">
-                                    <img src="img/team.png" alt="Friends" class="mr-3" style="width:30px;">
-
-                                    <div class="media-body">
-                                        <h5>Donate with your friends</h5>
-                                        <p>It can be intimidating donating for the first time, why not bring friends along?</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col w-50">
-                                <div class="media p-2">
-                                    <img src="img/award.png" alt="Add" class="mr-3" style="width:30px;">
-
-                                    <div class="media-body">
-                                        <h5>Compete with teams</h5>
-                                        <p> Participate in events with your friends, work place or even your university!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="col-md-6">
-
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="float-sm-right">
-                Hello
-            </div> -->
         </div>
-        <!--<%- include('./partials/footer') %>-->
-    </body>
-</html>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item mx-auto">
+                <h6 class="mb-0"><a class="nav-link active" href="about">Find out more</a></h6>
+            </li>
+        </ul>
+
+        <hr/>
+
+        <h3 class="text-center mb-3 font-rubik">Want to get involved?</h3>
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item mx-auto">
+                <h6 class="mb-0"><a class="nav-link active px-4 py-3 bg-success" href="signup">Create an account</a></h6>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="signin">Already have an account?</a>
+            </li>
+        </ul>
+    </div>
+
+<%- include('./partials/final') %>

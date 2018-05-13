@@ -1,15 +1,5 @@
-<!DOCTYPE html>
 
-<html lang="en">
-    <head>
-        <%- include('./partials/script') %>
-    </head>
-
-    <body>
-
-        <div class="container-fluid container-nomargin">
-            <%- include('./partials/header') %>
-
+<%- include('./partials/initial', {title: 'Sign Up', status: 'guest'}) %>
             <div class="mx-auto bg-light w-40 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
                 <form class="was-validated">
 
@@ -122,14 +112,14 @@
                     <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
                     <label class="custom-control-label" for="customControlValidation1">Agree to terms and services.</label>
                     <div class="invalid-feedback">Please agree to the terms of the website.</div>
-                    <div class="valid-feedback">&nbsp;</div>
                 </div>
+                <div>
 
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <button type="submit" class="nav-link active bg-primary" >Create account</button>
+                        <a class="nav-link active bg-primary" href="api-createmember">Create account</a>
                     </li>
                 </ul>
-        </div>
-    </body>
-</html>
+                </div>
+
+                <%- include('./partials/final') %>
