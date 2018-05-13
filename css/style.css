@@ -44,11 +44,6 @@ input[type=number]::-webkit-outer-spin-button {
     width: 11px;
 }
 
-<<<<<<< HEAD
-.scroll{
-    overflow: auto;
-=======
 .deleteEntry:hover {
     cursor: pointer;
->>>>>>> origin/addison
 }

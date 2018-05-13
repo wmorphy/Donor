@@ -49,13 +49,10 @@ $(document).ready(function() {
 
     });
 
-<<<<<<< HEAD
 
-=======
     $(".deleteEntry").click(function() {
         $(this).closest("tr").remove();
-    })
->>>>>>> origin/addison
+    });
 
 });
 
