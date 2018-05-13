@@ -1,4 +1,3 @@
-// var notifs = db.notifications.find();
 
 $(document).ready(function() {
     $(".textFieldInput").hide();
@@ -25,6 +24,8 @@ $(document).ready(function() {
         $("#test2").toggle();
         $("#test3").toggle();
     });
+
+
 
     $(".showForm").click(function() {
         const thisForm = "#" + $(this).attr("id") + "Form";

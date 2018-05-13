@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/controller");
 const restreqs = require("../controllers/restreqs");
+var csrf = require('csurf');
+
+var csrfProtection = csrf();
 
 
 
@@ -19,6 +22,19 @@ router.get("/book", controller.fetchBookApp);
 
 
 
+
+//
+// router.get("../views/signIn", function(req, res, next){
+//     res.render("../views/signIn", {csrfToken: req.csrfToken()});
+// });
+
+
+router.get('/api-createuser/:pw/:first/:last/:DOB/:address/:suburb/:postcode/:state/:phone/:email', restreqs.createMember);
+
+
+
+
+
 router.get('/api/:id', restreqs.findProfile);
 // find all notifications
 router.get('/api-notifs', restreqs.findAllNotifs);
@@ -26,6 +42,7 @@ router.get('/api-notifs', restreqs.findAllNotifs);
 router.get('/api-donations', restreqs.findDonations);
 
 
-
+router.get('/api-activeuserid/:id', restreqs.updateActiveUserID);
+router.get('/api-activeuserid', restreqs.findActiveUserIDs);
 
 module.exports = router;

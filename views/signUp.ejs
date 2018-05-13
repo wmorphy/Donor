@@ -1,6 +1,7 @@
 
 <%- include('./partials/initial', {title: 'Sign Up', status: 'guest'}) %>
-            <div class="mx-auto bg-light w-40 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
+
+            <div class="mx-auto bg-light w-50 ml-4 my-4 px-3 py-3 shadow rounded" style="min-width: 450px;">
                 <form class="was-validated">
 
                 <h4 class="font-rubik mb-3">Account Creation</h4>
@@ -11,11 +12,12 @@
                 <p>
 
                     <div id="myForm" class="form-group form-inline mb-3">
-                        <div>
+                        <div class="ml-2">
                             <!--FirstName-->
                             <p class="ml-1 mb-1 font-weight-bold">First Name <span class="text-danger">*</span></p>
                             <input id="firstName" type="text" class="form-control" size=20 required/>
                         </div>
+
 
                         <div class="ml-2">
                             <!--SURNAME-->
@@ -117,7 +119,7 @@
 
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link active bg-primary" href="api-createmember">Create account</a>
+                        <a id="create" class="nav-link active bg-primary" >Create account</a>
                     </li>
                 </ul>
                 </div>
