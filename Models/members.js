@@ -19,4 +19,7 @@ var MemberSchema = new mongoose.Schema(
         "weight": String
     }
 );
+
+
+
 mongoose.model('members', MemberSchema);

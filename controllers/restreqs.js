@@ -69,5 +69,4 @@ var findDonations = function(req,res){
 // module.exports.findMember = findMember;
 module.exports.findAllNotifs = findAllNotifs;
 module.exports.findDonations = findDonations;
-//module exports
 module.exports.findProfile = findProfile;

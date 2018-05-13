@@ -1,6 +1,6 @@
-var activeID = "";
-var activeLongID = "";
 
+var activeID = "";
+var activeLongID = "00000000000000000";
 // DOM Ready
 $(document).ready(function() {
     // Populate page with HTML snippets
@@ -16,10 +16,11 @@ function enterSite() {
     var inputID = document.getElementById("donornumlandingpage").value;
     $.getJSON( '/api/00000000000000000' + inputID, function(data) {
         var password_str = data.password;
-        alert(document.getElementById($("#passwordlandingpage").val()));
+        alert(activeID += document.getElementById($("#passwordlandingpage").val()));
         if (password_str == $("#passwordlandingpage").val()){
             activeMemberID = "00000000000000000" + inputID;
             alert("paswords mattch borooossss");
+            window.open()
         }
         else {
             alert("Password or Donor Number is incorrect. Please try again.")
