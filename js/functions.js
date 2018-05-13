@@ -48,7 +48,15 @@ $(document).ready(function() {
 
     });
 
+    $(window).resize(function() {
 
+    });
+
+
+    // $(".team").each(function() {
+    //     alert("hi");
+    //     alert($(this).html());
+    // });
 
 });
 
@@ -91,15 +99,6 @@ function createGraph() {
     });
 }
 
-<<<<<<< HEAD
-function bookedAlert() {
-    alert("Appointment Booked!");
-}
-
-
-
-
-=======
 var notif = [
 
     {Title: "DonorSpace",
@@ -193,4 +192,3 @@ function startPreviousDonations() {
         $("#prevDon").append(html);
     }
 };
->>>>>>> dab5ffcff902d47da777d00140ef3c88eb73f8b9

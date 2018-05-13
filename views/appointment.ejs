@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <%- include('./partials/script') %>
+        <%- include('./partials/script', {title: 'Book an Appointment'}) %>
     </head>
 
     <body>
@@ -13,6 +13,8 @@
 
             <div class="mx-auto bg-light w-40 mt-4 px-3 py-3 shadow-sm" style="min-width: 450px;">
                 <h3 class="text-center font-rubik mb-3">Book Appointment</h3>
+
+                <hr/>
 
                 <form class="p-0">
                     <div class="row w-100 text-center mx-auto">
@@ -215,7 +217,8 @@
                         </div>
                     </div>
 
-
+                </form>
+            </div>
         </div>
     </body>
 </html>
