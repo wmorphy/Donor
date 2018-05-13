@@ -189,6 +189,12 @@ function startPreviousDonations() {
         html += '<td class="text-success font-weight-bold text-center">&#10004;</td>'
         html += '<td class="text-danger font-weight-bold text-center">&times;</td>'
         html += '<td class="text-danger font-weight-bold text-center">&times;</td></tr>'
+        html = '<tr>';
+        html += '<td>08/05/2018</td>';
+        html += '<td>Melbourne Central</td>';
+        html += '<td class="text-success font-weight-bold text-center">&#10004;</td>';
+        html += '<td class="text-danger font-weight-bold text-center">&times;</td>';
+        html += '<td class="text-danger font-weight-bold text-center">&times;</td></tr>';
         $("#prevDon").append(html);
     }
 };
