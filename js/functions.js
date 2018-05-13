@@ -14,7 +14,7 @@ $(document).ready(function() {
     location = location[location.length - 1];
 
     // Only run the create function on the correct page
-    if (location === "profile") {
+    if (location === "profile" || location === "teamprofile") {
         createGraph();
     }
 
@@ -47,6 +47,10 @@ $(document).ready(function() {
         }
 
     });
+
+    $(".deleteEntry").click(function() {
+        $(this).closest("tr").remove();
+    })
 
 });
 
