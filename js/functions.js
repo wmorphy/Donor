@@ -48,16 +48,6 @@ $(document).ready(function() {
 
     });
 
-    $(window).resize(function() {
-
-    });
-
-
-    // $(".team").each(function() {
-    //     alert("hi");
-    //     alert($(this).html());
-    // });
-
 });
 
 function createGraph() {

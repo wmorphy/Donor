@@ -1,30 +1,16 @@
-<!DOCTYPE html>
+<%- include('./partials/initial', {title: 'News Feed', status: 'member'}) %>
 
-<html lang="en">
-<head>
-  <%- include('./partials/script', {title: 'News Feed'}) %>
-
-</head>
-
-<body>
-
-    <div  class="container-fluid container-nomargin">
-       <%- include('./partials/Header') %>
-
-        <div class="mx-auto bg-light w-50 ml-4 my-4 px-3 py-3 shadow rounded " style="min-width: 400px;">
-            <h2 class="text-uppercase font-rubik ls-2 text-center"><strong>Your News Feed</strong></h2>
-            <hr/>
-            <div id="append" class="w-100" style="overflow-y: scroll; max-height: 600px;">
-
-            </div>
-            <!--<div>-->
-                <!--<button id="loadMore" type="button" class="btn btn-outline-primary d-block mx-auto"-->
-                        <!--onclick="startNotifications()">Load More</button>-->
-            <!--</div>-->
+    <div class="mx-auto bg-light w-50 ml-4 my-4 px-3 py-3 shadow rounded " style="min-width: 400px;">
+        <h2 class="text-uppercase font-rubik ls-2 text-center"><strong>Your News Feed</strong></h2>
+        <hr/>
+        <div id="append" class="w-100" style="overflow-y: scroll; max-height: 600px;">
 
         </div>
+        <!--<div>-->
+            <!--<button id="loadMore" type="button" class="btn btn-outline-primary d-block mx-auto"-->
+                    <!--onclick="startNotifications()">Load More</button>-->
+        <!--</div>-->
 
     </div>
-    <!--<%- include('./partials/footer') %>-->
-</body>
-</html>
+
+<%- include('./partials/final') %>
