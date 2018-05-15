@@ -31,6 +31,7 @@ var createMember = function(req,res){
             res.sendStatus(400);
         }
     });
+
 };
 var findAllTeams = function(req,res){
     Teams.find(function(err,teams){

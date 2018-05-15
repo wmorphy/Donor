@@ -34,8 +34,13 @@ $(document).ready(function() {
         $.get('/api-createuser/'+$("#password").val() +'/' +$("#firstName").val()+'/'+$("#surname").val()+'/'+$("#dateOfBirth").val()
             +'/'+$("#address").val()+'/'+$("#city").val()+'/'+$("#postcode").val()+'/'
             +$("#state").val()+'/'+$("#mobile").val()+'/'+$("#email").val());
+        window.location.href = "/home";
     });
 });
+
+
+
+
 function updateProfle(){
 var userdoc = $.getJSON('/api-activeuserid', function(doc) {
     var userid = doc.donorID;
