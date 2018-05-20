@@ -3,7 +3,7 @@
 
     <div class="mx-auto bg-light w-50 mt-0 mb-3 px-3 py-3 shadow-sm" style="min-width: 350px;">
         <div class="d-flex mb-0">
-            <h3 class="ml-2 text-center font-rubik mx-auto mb-0 text-uppercase">Your Teams</h3>
+            <h3 class="ml-2 text-center font-rubik mx-auto mb-0 text-uppercase">Events</h3>
 
             <!--<form action="/action_page.php">-->
                 <!--<div class="form-group form-inline mb-0">-->
@@ -15,21 +15,26 @@
             <!--</form>-->
         </div>
 
-        <!--<hr/>-->
-
         <div class="justify-content-between">
+            <ul class="nav nav-tabs mt-3">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#details">Running</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#statistics">Past Events</a>
+                </li>
+            </ul>
             <div>
                 <!--<h5 class="text-center">Your Teams</h5>-->
                 <div class="d-flex justify-content-around flex-wrap">
                     <div class="d-flex flex-wrap justify-content-around">
                         <!--<div class="card d-inline-block bg-light mt-3" id = "allteams">-->
-                        <%- include("./partials/placeholderteam", {name: 'Monash University', members: '123', image: 'monash.png'}) %>
-                        <%- include("./partials/placeholderteam", {name: 'University of Melbourne', members: '345', image: 'unimelb.png'}) %>
-                        <%- include("./partials/placeholderteam", {name: 'International House', members: '31', image: 'inthouse.png'}) %>
+                        <%- include("./partials/placeholderevent", {name: 'The AUSUNI Donor Push', goal: '350L', teams: '37'}) %>
+                        <%- include("./partials/placeholderevent", {name: 'Tech Giants\' Giant Donation', goal: '100L', teams: '19'}) %>
+                        <%- include("./partials/placeholderevent", {name: 'Girl Power', goal: '20L', teams: '6'}) %>
                     </div>
                 </div>
 
-                <h6 class="mb-0"><a class="font-rubik mt-2 ls-1 nav-link text-center" href="leaderboards">Leaderboards</a></h6>
             </div>
         </div>
     </div>

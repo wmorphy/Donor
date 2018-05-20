@@ -6,7 +6,8 @@ $(document).ready(function() {
     $("#test2").removeAttr("hidden");
     $("#test3").hide();
     $("#test3").removeAttr("hidden");
-    $("#test3").removeAttr("hidden");
+    $("#join").hide();
+    $("#join").removeAttr("hidden");
 
     // Get what page we are currently on
     var location = window.location.href.split("/");
@@ -54,6 +55,14 @@ $(document).ready(function() {
         $(this).closest("tr").remove();
     });
 
+    $("#btnBone").click(function() {
+        $("#join").fadeIn();
+    });
+
+    $("#btnYes").click(function() {
+        $(this).removeClass("btn-outline-success");
+        $(this).addClass("btn-success");
+    });
 });
 
 function createGraph() {
