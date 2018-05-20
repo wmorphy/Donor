@@ -29,6 +29,7 @@ const fetchContact = (req, res) => {
 const fetchTeam = (req, res) => {
     res.render("teamprofile");
 };
+
 const fetchSignIn = (req, res) => {
     res.render("signin");
 };
@@ -40,7 +41,15 @@ const fetchBookApp = (req, res) => {
     res.render("appointment");
 };
 
+const fetchLeaderboards = (req, res) => {
+    res.render("leaderboards");
+};
+
+const fetchEvents = (req, res) => {
+    res.render("events");
+};
+
 
 module.exports = {
-    fetchLanding, fetchHome, fetchProfile, fetchTeamProfile, fetchTeam, fetchTeams, fetchBookApp, fetchSignIn, fetchSignUp, fetchAbout, fetchContact
+    fetchLanding, fetchHome, fetchProfile, fetchTeamProfile, fetchLeaderboards, fetchEvents, fetchTeam, fetchTeams, fetchBookApp, fetchSignIn, fetchSignUp, fetchAbout, fetchContact
 }

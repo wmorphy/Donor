@@ -16,6 +16,8 @@ router.get("/signUp", controller.fetchSignUp);
 router.get("/signIn", controller.fetchSignIn);
 router.get("/profile", controller.fetchProfile);
 router.get("/teams", controller.fetchTeams);
+router.get("/leaderboards", controller.fetchLeaderboards);
+router.get("/events", controller.fetchEvents);
 router.get("/teamProfile", controller.fetchTeam);
 router.get("/book", controller.fetchBookApp);
 
