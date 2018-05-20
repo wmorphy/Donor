@@ -34,7 +34,10 @@ $(document).ready(function() {
         $.get('/api-createuser/'+$("#password").val() +'/' +$("#firstName").val()+'/'+$("#surname").val()+'/'+$("#dateOfBirth").val()
             +'/'+$("#address").val()+'/'+$("#city").val()+'/'+$("#postcode").val()+'/'
             +$("#state").val()+'/'+$("#mobile").val()+'/'+$("#email").val());
+        //reallocate window to Home
+        //should then fill profile with relevent information
         window.location.href = "/home";
+
     });
 });
 
