@@ -26,13 +26,17 @@
             </ul>
             <div>
                 <!--<h5 class="text-center">Your Teams</h5>-->
-                <div class="d-flex justify-content-around flex-wrap">
-                    <div class="d-flex flex-wrap justify-content-around">
-                        <!--<div class="card d-inline-block bg-light mt-3" id = "allteams">-->
-                        <%- include("./partials/placeholderevent", {name: 'The AUSUNI Donor Push', goal: '350L', teams: '37'}) %>
-                        <%- include("./partials/placeholderevent", {name: 'Tech Giants\' Giant Donation', goal: '100L', teams: '19'}) %>
-                        <%- include("./partials/placeholderevent", {name: 'Girl Power', goal: '20L', teams: '6'}) %>
-                    </div>
+                <div>
+                    <!--<div class="card d-inline-block bg-light mt-3" id = "allteams">-->
+                    <%- include("./partials/placeholderevent",
+                    {
+                        name: 'The Australian University Donor Push',
+                        description: 'The AUSUNI Donor Push is an event which all Australian Universities are partaking in.\
+                        The aim is for each university to have 700 people donating, a very small portion of their monstrous cohort.',
+                        goal: '350L',
+                        teams: '37'}) %>
+                    <%- include("./partials/placeholderevent", {name: 'The Tech Giants\' Giant Donation', description: '.', goal: '100L', teams: '19'}) %>
+                    <%- include("./partials/placeholderevent", {name: 'University of Melbourne College Competition', description: '.', goal: '20L', teams: '6'}) %>
                 </div>
 
             </div>

@@ -2,7 +2,7 @@
 <%- include('./partials/initial', {title: 'Sign Up', status: 'guest'}) %>
 
             <div class="mx-auto bg-light w-50 ml-4 my-4 px-3 py-3 shadow rounded" style="min-width: 450px;">
-                <form class="was-validated">
+                <form id="needs-validation" novalidate>
 
                 <h4 class="font-rubik mb-3">Account Creation</h4>
 
@@ -119,9 +119,14 @@
 
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a id="create" class="nav-link active bg-primary" >Create account</a>
+                        <button class="btn btn-info" type="submit">Submit form</button>
+                        <!--<a id="create" class="nav-link active bg-primary" >Create account</a>-->
                     </li>
                 </ul>
+
                 </div>
+
+                </form>
+            </div>
 
                 <%- include('./partials/final') %>
