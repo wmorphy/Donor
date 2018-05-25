@@ -53,6 +53,11 @@ var userdoc = $.getJSON('/api-activeuserid', function(doc) {
         var newEmail = $("#newEmail").val();
         var newMobile = $("#newMobile").val();
         var newDOB = $("#newDOB").val();
+        //Find memebers based on email
+        //
+        //
+        //
+        //
         Members.findOneAndUpdate({_id: "00000000000000000" + userid}, {$set: {email: newEmail}}, {$set: {phone: newMobile}},
             {$set: {dateofbirth: newDOB}}, {new: true}, function (err, doc) {
             });
@@ -64,7 +69,10 @@ var userdoc = $.getJSON('/api-activeuserid', function(doc) {
 
 //Create HTML snippets
 function processProfileData() {
-
+    //make sure we find people based of there email and not id
+    //Do it now
+    //
+    //
     var userdoc = $.getJSON('/api-activeuserid', function(doc){
         var userid = doc.donorID;
 
@@ -93,7 +101,11 @@ function processProfileData() {
 
 
 function processTeamData() {
-
+    //Switch to make sure it handles email
+    //
+    //
+    //
+    //
     var userdoc = $.getJSON('/api-activeuserid', function(doc){
         var userid = doc.donorID;
 
@@ -125,7 +137,12 @@ $('#submitlandingpage').on('click', enterSite);
 
 function enterSite() {
 // checks if the sign in page password is equal to one from the database
-    var inputID = document.getElementById("donornumlandingpage").value;
+    var inputID = document.getElementById("emailLandingPage").value;
+    //Switch to email
+    //
+    //
+    //
+    //
     $.getJSON( '/api/00000000000000000' + inputID, function(data) {
         var password_str = data.password;
         alert(activeID += document.getElementById($("#passwordlandingpage").val()));
@@ -183,7 +200,13 @@ function processDonationData() {
 
 function enterSite() {
 // checks if the sign in page password is equal to one from the database
-    var inputID = document.getElementById("donornumlandingpage").value;
+    //make sure it is able to be used by the EMAIL
+    //
+    //
+    //
+    //
+
+    var inputID = document.getElementById("emailLandingPage").value;
     var user_exists = false;
 
     var  db_data = $.getJSON( '/api/00000000000000000' + inputID, function(data) {
