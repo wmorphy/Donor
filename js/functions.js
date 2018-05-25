@@ -18,6 +18,16 @@ $(document).ready(function() {
         createGraph();
     }
 
+    if (location.split("#").length > 1) {
+        tabtype = location.split("#")[1];
+        $('.nav-pills a[href="#' + $.trim(tabtype) + '"]').tab('show');
+    }
+
+    else if (location === "about") {
+        $('.nav-pills a[href="#blood"]').tab('show');
+    }
+
+
     $("#test1, #test3").click(function() {
         $(".textField").toggle();
         $(".textFieldInput").toggle();
@@ -63,6 +73,17 @@ $(document).ready(function() {
         $(this).removeClass("btn-outline-success");
         $(this).addClass("btn-success");
     });
+
+    window.addEventListener('load', function() {
+        var form = document.getElementById('needs-validation');
+        form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    }, false);
 });
 
 function createGraph() {
