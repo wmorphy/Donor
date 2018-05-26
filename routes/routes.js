@@ -20,6 +20,7 @@ router.get("/leaderboards", controller.fetchLeaderboards);
 router.get("/events", controller.fetchEvents);
 router.get("/teamProfile", controller.fetchTeam);
 router.get("/book", controller.fetchBookApp);
+router.get("*", controller.fetch404);
 
 
 

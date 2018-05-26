@@ -49,7 +49,11 @@ const fetchEvents = (req, res) => {
     res.render("events");
 };
 
+const fetch404 = (req, res) => {
+    res.render("404");
+};
+
 
 module.exports = {
-    fetchLanding, fetchHome, fetchProfile, fetchTeamProfile, fetchLeaderboards, fetchEvents, fetchTeam, fetchTeams, fetchBookApp, fetchSignIn, fetchSignUp, fetchInfo, fetchContact
+    fetchLanding, fetchHome, fetchProfile, fetchTeamProfile, fetchLeaderboards, fetchEvents, fetchTeam, fetchTeams, fetchBookApp, fetchSignIn, fetchSignUp, fetchInfo, fetchContact, fetch404
 }
