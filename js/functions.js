@@ -66,7 +66,21 @@ $(document).ready(function() {
     });
 
     $(".btnBone").click(function() {
-        $(this).parent().parent().find(".join").fadeIn();
+        $(this).parent().parent().find(".join").css('opacity', 0)
+            .slideDown('slow')
+            .animate(
+                { opacity: 1 },
+                { queue: false, duration: 'slow' }
+            );
+    });
+
+    $(".dismissBone").click(function() {
+        $(this).parent().css('opacity', 1)
+            .slideUp('slow')
+            .animate(
+                { opacity: 0 },
+                { queue: false, duration: 'slow' }
+            );
     });
 
     $("#btnYes").click(function() {
