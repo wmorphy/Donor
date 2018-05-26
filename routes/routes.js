@@ -21,7 +21,6 @@ router.get("/eventpage", controller.fetchEventPage);
 router.get("/events", controller.fetchEvents);
 router.get("/teamprofile", controller.fetchTeam);
 router.get("/book", controller.fetchBookApp);
-router.get("*", controller.fetch404);
 
 
 
@@ -50,4 +49,7 @@ router.get('/api-teams', restreqs.findAllTeams);
 router.get('/api-activeuserid/:id', restreqs.updateActiveUserID);
 router.get('/api-activeuserid', restreqs.findActiveUserIDs);
 
+
+
+router.get("*", controller.fetch404);
 module.exports = router;
