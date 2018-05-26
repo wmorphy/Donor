@@ -9,6 +9,10 @@ $(document).ready(function() {
     $(".join").hide();
     $(".join").removeAttr("hidden");
 
+    $('#datepicker').datepicker({
+        uiLibrary: 'bootstrap4'
+    });
+
     // Get what page we are currently on
     var location = window.location.href.split("/");
     location = location[location.length - 1];
