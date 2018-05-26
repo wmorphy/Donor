@@ -10,6 +10,7 @@ var csrfProtection = csrf();
 
 router.get("/", controller.fetchLanding);
 router.get("/information", controller.fetchInfo);
+router.get("/about", controller.fetchAbout);
 router.get("/contact", controller.fetchContact);
 router.get("/home", controller.fetchHome);
 router.get("/signup", controller.fetchSignUp);
