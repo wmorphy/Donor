@@ -201,12 +201,12 @@ function enterSite() {
             window.location.href="/home";
         }
         else{
-            alert("Donor Number or Password is incorrect. Please try again.");
+            alert("Email or password is incorrect. Please try again.");
         }
     })
 
     .fail(function(){
-        alert("fail");
+        alert("Email or password is incorrect. Please try again.");
     })
     .always(function() { alert('getJSON request ended!'); });
 };
