@@ -1,13 +1,19 @@
+var userID="";
+var userdoc = $.getJSON('/api-activeuserid', function(doc) {
+    userID = doc.donorID;
+});
 
-var activeID = "";
-var activeLongID = "00000000000000000";
 // DOM Ready
 $(document).ready(function() {
 
     $('#submitlandingpage').click(enterSite);
-
+    $('#logout').click(logout);
 
     var pathname = window.location.pathname;
+
+    if (userID != "none"){
+
+    }
 
 
     if (pathname == "/profile") {
@@ -129,7 +135,7 @@ function processTeamData() {
                     // html = '< include("./partials/placeholderteam", {name: 'this.teamID', members: 'this.members.count()', image: 'this.image', link: 'this.link'})'
                     // this.teamID
                     // this.teamname
-                    this.members.count();
+                    //this.members.count();
                     // append the previous donations to the div prevDon
                     $("#allteams").append(html);
                 }
@@ -210,5 +216,12 @@ function enterSite() {
     .fail(function(){
         alert("Email or password is incorrect. Please try again.");
     })
-    .always(function() { alert('getJSON request ended!'); });
+};
+
+
+// LOG OUT FUNCTION
+function logout() {
+    $.get('/api-activeuserid/'+"0", function(doc){});
+    window.location.href="/";
+
 };

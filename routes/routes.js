@@ -8,6 +8,7 @@ var csrfProtection = csrf();
 
 
 
+
 router.get("/", controller.fetchLanding);
 router.get("/information", controller.fetchInfo);
 router.get("/about", controller.fetchAbout);
@@ -48,6 +49,7 @@ router.get('/api-teams', restreqs.findAllTeams);
 
 router.get('/api-activeuserid/:id', restreqs.updateActiveUserID);
 router.get('/api-activeuserid', restreqs.findActiveUserIDs);
+
 
 
 
