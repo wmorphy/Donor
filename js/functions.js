@@ -143,6 +143,8 @@ function createGraph() {
     });
 }
 
+
+
 function bookedAlert() {
     alert("Appointment Booked!");
 };
