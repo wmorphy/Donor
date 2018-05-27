@@ -93,6 +93,8 @@ function processProfileData() {
             $("#weight").text(data.weight);
             $("#height").text(data.height);
             $("#haemoglobin").text(data.haemoglobin);
+            $(".loaderDiv").hide();
+            $(".contentDiv").animate({opacity: 1});
         });
 
 
