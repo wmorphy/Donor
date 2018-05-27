@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var MemberSchema = new mongoose.Schema(
     {
         "donorID": String,
+        "donorNum": String,
         "password": String,
         "firstname": String,
         "lastname": String,

@@ -80,20 +80,19 @@ function processProfileData() {
         // jQuery AJAX call for JSON
         $.getJSON( '/api/' + userid, function(data) {
             // store in global variable
-            alert(data.email);
-            // $("#fullName").text(data.firstname+ ' ' + data.lastname);
+            $("#fullName").text(data.firstname+ ' ' + data.lastname);
             $("#dob").text(data.dateofbirth);
             $("#address").text(data.address);
             $("#city").text(data.suburb);
-            // $("#postcode").text(data.postcode);
+            $("#postcode").text(data.postcode);
             $("#state").text(data.state);
             $("#mobile").text(data.phone);
             $("#email").text(data.email);
-            $("#donornum").append(data.userid);
-            // $("#bloodtype").text(data.bloodtype);
-            // $("#weight").text(data.weight);
-            // $("#height").text(data.height);
-            // $("#haemoglobin").text(data.haemoglobin);
+            $("#donornum").text(data.donorNum);
+            $("#bloodtype").text(data.bloodtype);
+            $("#weight").text(data.weight);
+            $("#height").text(data.height);
+            $("#haemoglobin").text(data.haemoglobin);
         });
 
 
