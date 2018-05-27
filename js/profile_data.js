@@ -83,6 +83,13 @@ function processProfileData() {
         //Current user id is equal to email
         var userid = doc.donorID;
 
+        if (userid == 0) {
+            alert("You are not logged in.");
+            window.location.href = "/";
+        }
+
+        else {
+
         // jQuery AJAX call for JSON
         $.getJSON( '/api/' + userid, function(data) {
             // store in global variable
@@ -101,8 +108,13 @@ function processProfileData() {
             $("#haemoglobin").text(data.haemoglobin);
             $(".loaderDiv").hide();
             $(".contentDiv").animate({opacity: 1});
-        });
+        })
 
+            .fail(function(){
+                alert("Unable to load profile.");
+            });
+
+            }
 
     });
 };
