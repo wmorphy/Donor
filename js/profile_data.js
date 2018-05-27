@@ -80,13 +80,6 @@ function processProfileData() {
         //Current user id is equal to email
         var userid = doc.donorID;
 
-        if (userid == 0) {
-            alert("You are not logged in.");
-            window.location.href = "/";
-        }
-
-        else {
-
         // jQuery AJAX call for JSON
         $.getJSON( '/api/' + userid, function(data) {
             // store in global variable
@@ -107,11 +100,9 @@ function processProfileData() {
             $(".contentDiv").animate({opacity: 1});
         })
 
-            .fail(function(){
-                alert("Unable to load profile.");
-            });
-
-            }
+        .fail(function(){
+            console.log("Unable to load profile.");
+        });
 
     });
 };
@@ -132,10 +123,13 @@ function processDonationData() {
 
         // jQuery AJAX call for JSON
         $.getJSON( '/api-donations', function(data) {
+            donations = 0;
+            html = '';
 
             $.each(data, function(){
                 if (this.donorID == userid) {
-                    html = '<tr>'
+                    donations += 1;
+                    html += '<tr>'
                     html += '<td>'+this.date+'</td>'
                     html += '<td>'+ this.location +'</td>'
 
@@ -156,9 +150,17 @@ function processDonationData() {
                         html += '<td class="text-success font-weight-bold text-center">&#10004;</td></tr>'
                     }
                     // append the previous donations to the div prevDon
-                    $("#prevDon").append(html);
+
+
                 }
-            })
+            });
+            if (donations === 0) {
+                $("#prevDon").append("<td>NO DONATIONS</td>");
+            }
+
+            else {
+                $("#prevDon").append(html);
+            }
         });
 
     });

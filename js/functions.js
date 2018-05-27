@@ -1,3 +1,18 @@
+var whereami = window.location.href.split("/");
+whereami = whereami[whereami.length - 1].split("#")[0].split("?")[0];
+
+var guest = ["", "about", "contact", "information", "signup", "signin"];
+
+if (guest.indexOf(whereami) == -1) {
+    $.getJSON('/api-activeuserid', function(doc){
+    if (doc.donorID == 0) {
+        alert("You are not logged in.");
+        window.location.href = "/";
+    }
+});
+    }
+
+
 
 $(document).ready(function() {
     $(".textFieldInput").hide();
