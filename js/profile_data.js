@@ -23,7 +23,7 @@ $(document).ready(function() {
 
     }
     if (pathname == "/teams") {
-        //processTeamData();
+        processTeamData();
     }
 
     //EDIT MEMBER
@@ -111,21 +111,19 @@ function processProfileData() {
 
 // POPULATE TEAMS PAGE keep doing
 function processTeamData() {
-
     var userdoc = $.getJSON('/api-activeuserid', function(doc){
         var userid = doc.donorID;
-
+        console.log(userid);
         // jQuery AJAX call for JSON
         $.getJSON( '/api-teams', function(data) {
 
             $.each(data, function(){
-                if (this.members.contains(userid)) {
-                    // html = '< include("./partials/placeholderteam", {name: 'this.teamID', members: 'this.members.count()', image: 'this.image', link: 'this.link'})'
-                    // this.teamID
-                    // this.teamname
-                    //this.members.count();
+                console.log("hello")
+                if (this.email == userid) {
+                     var html = "<%- include('./partials/placeholderteam', {name: "+ this.teamID +", members: "+ this.members.count() +", link: "+ this.link +"}) %>"
+                     console.log("oneMessage");
                     // append the previous donations to the div prevDon
-                    $("#allteams").append(html);
+                    $("#teamsPage").append(html);
                 }
 
             })
