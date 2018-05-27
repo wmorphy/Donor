@@ -25,7 +25,8 @@ $(document).ready(function() {
     $(".join").removeAttr("hidden");
 
     $('#datepicker').datepicker({
-        uiLibrary: 'bootstrap4'
+        uiLibrary: 'bootstrap4',
+        format: 'dd/mm/yyyy'
     });
 
     // Get what page we are currently on
