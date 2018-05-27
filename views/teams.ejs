@@ -1,6 +1,8 @@
 <%- include('./partials/initial', {title: 'Teams', status: 'member'}) %>
 
-    <div class="mx-auto bg-light w-50 mt-0 mb-3 px-3 py-3 rounded shadow-sm" style="min-width: 350px;">
+<%- include('./partials/loading') %>
+
+    <div class="mx-auto bg-light w-50 mt-0 mb-3 px-3 py-3 rounded shadow-sm contentDiv" style="min-width: 350px; opacity: 0;">
         <h2 class="ml-2 text-center font-rubik ls-2 mx-auto mb-0 text-uppercase font-weight-bold">Teams</h2>
 
             <!--<form action="/action_page.php">-->
@@ -12,20 +14,32 @@
                 <!--</div>-->
             <!--</form>-->
 
-        <hr class="mb-0"/>
+        <hr/>
 
-        <ul class="nav nav-pills mt-3 justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#details">Your Teams</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#details">Search Teams</a>
-            </li>
-        </ul>
+        <!--<ul class="nav nav-pills mt-3 justify-content-center">-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link active" data-toggle="tab" href="#details">Your Teams</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link" data-toggle="tab" href="#details">Search Teams</a>-->
+            <!--</li>-->
+        <!--</ul>-->
 
-        <div id ="teamsPage" class="d-flex flex-wrap justify-content-around">
+        <h3 class="font-rubik text-center">Your Teams</h3>
+
+        <div id="teamsPage" class="d-flex flex-wrap justify-content-around">
 
         </div>
+
+        <hr/>
+
+        <h3 class="font-rubik text-center">Teams You Might Like</h3>
+
+        <div id="suggestedPage" class="d-flex flex-wrap justify-content-around">
+
+        </div>
+
+
     </div>
 
 <%- include('./partials/final') %>
