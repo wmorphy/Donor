@@ -28,11 +28,12 @@
 <div class="container-fluid p-0 pb-3">
 
     <% if (status == "member") { %>
-        <%- include('header') %>
-    <% } else if (status == "admin") { %>
-        <%- include('header') %>
-    <% } else { %>
-        <%- include('header') %>
+        <%- include('header', {hide: ''}) %>
+    <% } else if (status == "guest") { %>
+        <%- include('headerguest', {hide: ''}) %>
+    <% } else if (status == "both") { %>
+        <%- include('header', {hide: 'hidden'}) %>
+        <%- include('headerguest', {hide: 'hidden'}) %>
     <% } %>
 </div>
 

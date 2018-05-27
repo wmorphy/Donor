@@ -1,16 +1,35 @@
 var whereami = window.location.href.split("/");
 whereami = whereami[whereami.length - 1].split("#")[0].split("?")[0];
 
-var guest = ["", "about", "contact", "information", "signup", "signin"];
+var member = ["home", "book", "events", "teams", "profile"];
+var hybrid = ["about", "contact", "information"];
 
-if (guest.indexOf(whereami) == -1) {
-    $.getJSON('/api-activeuserid', function(doc){
-    if (doc.donorID == 0) {
-        alert("You are not logged in.");
-        window.location.href = "/";
+$.getJSON('/api-activeuserid', function(doc){
+    if (member.indexOf(whereami) != -1) {
+        if (doc.donorID == 0) {
+            alert("You are not logged in.");
+            window.location.href = "/";
+        }
+    }
+
+    if (hybrid.indexOf(whereami) != -1) {
+        $(".loaderDiv").hide();
+
+        if (doc.donorID != 0) {
+            $(".headerMember").removeAttr("hidden");
+        }
+
+        else {
+            $(".headerGuest").removeAttr("hidden");
+        }
+
+        $(".contentDiv").animate({opacity: 1});
     }
 });
-    }
+
+
+
+
 
 
 
@@ -23,6 +42,8 @@ $(document).ready(function() {
     $("#test3").removeAttr("hidden");
     $(".join").hide();
     $(".join").removeAttr("hidden");
+    $(".groupInvite").hide();
+    $(".groupInvite").removeAttr("hidden");
 
     $('#datepicker').datepicker({
         uiLibrary: 'bootstrap4',
@@ -78,6 +99,16 @@ $(document).ready(function() {
             $(this).addClass("btn-outline-danger");
         }
 
+    });
+
+    $(".groupDono").click(function() {
+       $(".groupInvite").removeAttr("hidden");
+        $(".groupInvite").css('opacity', 0)
+            .slideDown('slow')
+            .animate(
+                { opacity: 1 },
+                { queue: false, duration: 'slow' }
+            );
     });
 
 
