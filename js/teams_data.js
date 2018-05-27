@@ -1,11 +1,11 @@
-
+//Team Functions
 // DOM Ready
 $(document).ready(function() {
 
     var pathname = window.location.pathname;
 
     if (pathname == "/teams") {
-        processTeamData;
+        processTeamData();
 
     };
 
@@ -15,18 +15,13 @@ $(document).ready(function() {
 
 
 
-
-
-
-// POPULATE TEAMS PAGE keep doing
+// POPULATE TEAMS PAGE
 function processTeamData() {
 
     var userdoc = $.getJSON('/api-activeuserid', function(doc){
         var userid = doc.donorID;
-        alert("hello");
         // jQuery AJAX call for JSON
         $.getJSON( '/api-teams', function(data) {
-            alert("hello");
             $.each(data, function(){
                 if (this.email == userid) {
                     //var html = '<a href="/teamsprofile/'+this.link+'/'+ this.teamname +'/'+ this.members +/'" class="cardLink text-body mx-1 mt-3">'

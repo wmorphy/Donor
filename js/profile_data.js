@@ -1,3 +1,5 @@
+// Profile functions
+
 var userID="";
 var userdoc = $.getJSON('/api-activeuserid', function(doc) {
     userID = doc.donorID;
@@ -205,14 +207,6 @@ function enterSite() {
         alert("Email or password is incorrect. Please try again.");
     })
 };
-
-
-
-
-
-
-
-
 
 
 
