@@ -140,11 +140,20 @@ function processProfileData() {
             $("#state").text(data.state);
             $("#mobile").text(data.phone);
             $("#email").text(data.email);
-            $("#donornum").text(data.donorNum);
-            $("#bloodtype").text(data.bloodtype);
-            $("#weight").text(data.weight);
-            $("#height").text(data.height);
-            $("#haemoglobin").text(data.haemoglobin);
+
+            if (data.weight == "Donate to find out") {
+                $("#donorinfo").html("This information will be filled in automatically once you make your first donation.")
+            }
+
+            else {
+
+                $("#donornum").text(data.donorNum);
+                $("#bloodtype").text(data.bloodtype);
+                $("#weight").text(data.weight);
+                $("#height").text(data.height);
+                $("#haemoglobin").text(data.haemoglobin);
+
+            }
             $(".loaderDiv").hide();
             $(".contentDiv").animate({opacity: 1});
         })
@@ -208,6 +217,7 @@ function processDonationData() {
             }
 
             else {
+                $('.startDisabled').find('a').removeAttr("hidden");
                 $("#prevDon").append(html);
             }
         });
