@@ -1,13 +1,10 @@
-<div class="card d-inline-block bg-light mt-3 mx-2 flex-grow-1">
-    <div class="media mb-1 px-3 pt-2">
-        <img src="img/<%= image %>" class="mr-4" width="50px">
-
-        <div class="media-body align-self-center">
-            <h6 class="mb-1"><%= name %></h6>
-            <!--<p class="mb-0"><img src="img/torso.png" width="16px"> 100 <button type="button" class="ml-2 btn btn-outline-primary px-2 py-1"><h6 class="mb-0 small">Join Team</h6></button></p>-->
-            <p class="mb-0"><img src="img/torso.png" width="16px" class="mr-1"> <%= members %></p>
+<a href="/" class="cardLink text-body">
+    <div class="card px-3 pt-3 pb-2 mx-1 mt-3" style="width:175px;">
+        <img class="card-img-top rounded" src="img/<%= image %>" alt="Card image">
+        <hr class="mb-2"/>
+        <div class="card-body px-2 py-1">
+            <h5 class="card-title text-center font-rubik my-1"><%= name %></h5>
+            <p class="mb-0 text-center"><img src="img/torso.png" width="16px" class="mr-1"> <%= members %></p>
         </div>
-
-        <!--<a class="nav-link float-right align-self-center active ml-1 p-0" data-toggle="tab" href="#details">Join</a>-->
     </div>
-</div>
+</a>
