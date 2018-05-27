@@ -3,13 +3,12 @@ var activeID = "";
 var activeLongID = "00000000000000000";
 // DOM Ready
 $(document).ready(function() {
-    // Populate page with HTML snippets
 
     $('#submitlandingpage').click(enterSite);
 
+
     var pathname = window.location.pathname;
 
-    // Populate page with HTML snippets
 
     if (pathname == "/profile") {
         processProfileData();
@@ -81,21 +80,23 @@ function processProfileData() {
         // jQuery AJAX call for JSON
         $.getJSON( '/api/' + userid, function(data) {
             // store in global variable
-
-            $("#fullName").append(data.firstname+ ' ' + data.lastname);
-            $("#dob").append(data.dateofbirth);
-            $("#address").append(data.address);
-            $("#city").append(data.suburb);
-            $("#postcode").append(data.postcode);
-            $("#state").append(data.state);
-            $("#mobile").append(data.phone);
-            $("#email").append(data.email);
-            $("#donornum").append(userid);
-            $("#bloodtype").append(data.bloodtype);
-            $("#weight").append(data.weight);
-            $("#height").append(data.height);
-            $("#haemoglobin").append(data.haemoglobin);
+            alert(data.email);
+            // $("#fullName").text(data.firstname+ ' ' + data.lastname);
+            $("#dob").text(data.dateofbirth);
+            $("#address").text(data.address);
+            $("#city").text(data.suburb);
+            // $("#postcode").text(data.postcode);
+            $("#state").text(data.state);
+            $("#mobile").text(data.phone);
+            $("#email").text(data.email);
+            $("#donornum").append(data.userid);
+            // $("#bloodtype").text(data.bloodtype);
+            // $("#weight").text(data.weight);
+            // $("#height").text(data.height);
+            // $("#haemoglobin").text(data.haemoglobin);
         });
+
+
     });
 };
 
@@ -135,31 +136,7 @@ function processTeamData() {
 };
 
 
-$('#submitlandingpage').on('click', enterSite);
-
-function enterSite() {
-// checks if the sign in page password is equal to one from the database
-    var inputID = document.getElementById("emailLandingPage").value;
-    //Switch to email
-    //
-    //
-    //
-    //
-    $.getJSON( '/api/00000000000000000' + inputID, function(data) {
-        var password_str = data.password;
-        alert(activeID += document.getElementById($("#passwordlandingpage").val()));
-        if (password_str == $("#passwordlandingpage").val()){
-            activeMemberID = "00000000000000000" + inputID;
-            alert("paswords mattch borooossss");
-            window.open()
-        }
-        else {
-            alert("Password or Donor Number is incorrect. Please try again.")
-        }
-    });
-}
-
-
+// POPULATE PREVIOUS DONATIONS
 function processDonationData() {
 
     var userdoc = $.getJSON('/api-activeuserid', function(doc){
@@ -208,23 +185,25 @@ function enterSite() {
 
     var inputID = document.getElementById("emailLandingPage").value;
     alert(inputID);
+    alert($("#passwordLandingPage").val());
     var user_exists = false;
 
 
-    var  db_data = $.getJSON( '/api/' + inputID, function(data) {
+    $.getJSON( '/api/' + inputID, function(data){
+
         user_exists = true;
         var password_str = data.password;
-        alert(data.password);
 
-        if (password_str == $("#passwordlandingpage").val()){
-            $.get('/api-activeuserid/' + inputID, function(data){});
+        if (password_str == $("#passwordLandingPage").val()){
+            $.get('/api-activeuserid/' + inputID, function(doc){});
             window.location.href="/home";
         }
         else{
             alert("Donor Number or Password is incorrect. Please try again.");
         }
     })
+
     .fail(function(){
-        alert("lbkbdkwhfbor Password is incorrect. Please try again.");
+        alert("fail");
     });
 };

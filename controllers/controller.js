@@ -11,6 +11,7 @@ const fetchProfile = (req, res) => {
 };
 
 
+
 const fetchTeamProfile = (req, res) => {
     res.render("teamprofile");
 };

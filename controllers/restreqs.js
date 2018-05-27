@@ -45,7 +45,7 @@ var findAllTeams = function(req,res){
 
 
 var findActiveUserIDs = function(req,res){
-    ActiveUserIDs.findOne({_id: '000000000000000000000001'}, function(err,activeuserid){
+    ActiveUserIDs.findOne({_id: '000000000000000000000001'}, function(err, activeuserid){
         if(!err){
             res.send(activeuserid);
         }else{
@@ -75,8 +75,11 @@ var updateActiveUserID = function(req,res){
 var findProfile = function(req,res){
     var memberID = req.params.id;
     Members.find({email: memberID},function(err,member){
+        var member1 = member[0];
         if(!err){
-            res.send(member[0]);
+            // console.log(member1);
+            res.send(member1);
+
         }else{
             res.sendStatus(404);
         }
