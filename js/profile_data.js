@@ -13,11 +13,11 @@ $(document).ready(function() {
     if (pathname == "/profile") {
         processProfileData();
         processDonationData();
-        updateProfle();
+        //updateProfle();
 
     }
     if (pathname == "/teams") {
-        processTeamData();
+        //processTeamData();
     }
 
     //EDIT MEMBER
@@ -101,13 +101,9 @@ function processProfileData() {
 
 
 
-
+// POPULATE TEAMS PAGE keep doing
 function processTeamData() {
-    //Switch to make sure it handles email
-    //
-    //
-    //
-    //
+
     var userdoc = $.getJSON('/api-activeuserid', function(doc){
         var userid = doc.donorID;
 
@@ -115,24 +111,21 @@ function processTeamData() {
         $.getJSON( '/api-teams', function(data) {
 
             $.each(data, function(){
-                //if (this.members.contains(userid)) {
-                html = '<tr>'
-                html += '<td>'+this.teamID+'</td>'
-                html += '<td>'+ this.teamname +'</td>'
+                if (this.members.contains(userid)) {
+                    html = '< include("./partials/placeholderteam", {name: 'this.teamID', members: 'this.members.count()', image: 'this.image', link: 'this.link'})'
+                    this.teamID
+                    this.teamname
+                    this.members.count();
+                    // append the previous donations to the div prevDon
+                    $("#allteams").append(html);
+                }
 
-                html = '<div class="media mb-1 px-3 pt-2">'
-                html += '<img src="img/dabois.png" class="mr-4" width="50px">'
-                html += '<div class="media-body align-self-center">'
-                html += '<h6 class="mb-1">'+this.teamname+'</h6>'
-                html += '<p class="mb-0"><img src="img/torso.png" width="16px">'+this.teamID+'</p>'
-                html += '</div> </div>'
-                // append the previous donations to the div prevDon
-                $("#allteams").append(html);
-                // }
             })
         });
     });
 };
+
+
 
 
 // POPULATE PREVIOUS DONATIONS
@@ -185,8 +178,8 @@ function processDonationData() {
 function enterSite() {
 
     var inputID = document.getElementById("emailLandingPage").value;
-    alert(inputID);
-    alert($("#passwordLandingPage").val());
+    alert("hello");
+    console.log("hello");
     var user_exists = false;
 
 
