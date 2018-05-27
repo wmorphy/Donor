@@ -114,9 +114,9 @@ function processTeamData() {
 
             $.each(data, function(){
                 if (this.members.contains(userid)) {
-                    html = '< include("./partials/placeholderteam", {name: 'this.teamID', members: 'this.members.count()', image: 'this.image', link: 'this.link'})'
-                    this.teamID
-                    this.teamname
+                    // html = '< include("./partials/placeholderteam", {name: 'this.teamID', members: 'this.members.count()', image: 'this.image', link: 'this.link'})'
+                    // this.teamID
+                    // this.teamname
                     this.members.count();
                     // append the previous donations to the div prevDon
                     $("#allteams").append(html);
@@ -178,9 +178,7 @@ function processDonationData() {
 // EMAIL AND PASSWORD CHECK
 //checks if the Password and email match those of someone in the database
 function enterSite() {
-
     var inputID = $("#emailLandingPage").val();
-
     var user_exists = false;
 
 
