@@ -17,9 +17,9 @@
                         <div class="media-body align-self-center">
                             <!--<h4 class="mb-1 font-rubik ls-1"><strong id="fullName"></strong></h4>-->
                             <h4 id="fullName" class="mb-1 font-rubik ls-1 font-weight-bold">Loading...</h4>
-                            <button id="test1" type="button" class="btn btn-primary p-2"><h6 class="mb-0 small">Edit Profile</h6></button>
-                            <button id="test2" type="submit" class="btn btn-success p-2"><h6 class="mb-0 small">Save Changes</h6></button>
-                            <button id="test3" type="button" class="btn btn-danger p-2"><h6 class="mb-0 small">Cancel</h6></button>
+                            <!--<button id="test1" type="button" class="btn btn-primary p-2"><h6 class="mb-0 small">Edit Profile</h6></button>-->
+                            <!--<button id="test2" type="submit" class="btn btn-success p-2"><h6 class="mb-0 small">Save Changes</h6></button>-->
+                            <!--<button id="test3" type="button" class="btn btn-danger p-2"><h6 class="mb-0 small">Cancel</h6></button>-->
 
                         </div>
                     </div>
@@ -115,8 +115,7 @@
                             </div>
 
                         </div>
-                        <div class="tab-pane container fade" id="statistics">
-                            <div class="row mx-auto w-100">
+                        <div class="tab-pane fade" id="statistics">
                                 <!--<div class="col-sm-6 align-self-center">-->
                                     <!--<h1 class="text-center font-weight-bold font-rubik ls-2 display-4">0</h1>-->
                                     <!--<h5 class="text-center font-rubik ls-1">Donations Made</h5>-->
@@ -132,18 +131,17 @@
                                     <!--<h5 class="text-center font-rubik ls-1">Lives Saved</h5>-->
                                 <!--</div>-->
 
-                                <div class="col-sm-6 text-center" id="pieGraph">
-                                    <h1>Donations</h1>
-                                    <canvas id="myChart" class="mx-auto" width="180" height="180"></canvas>
+                            <div class="d-inline-block ml-3 text-center" id="pieGraph">
+                                <h2 class="font-rubik">Donations</h2>
+                                <canvas id="myChart" class="mx-auto" width="180" height="180"></canvas>
 
-                                    <hr/>
+                                <hr/>
 
-                                    <div class="text-left d-inline-block">
-                                        <h6>Key</h6>
-                                        <div class="label right"><div class="graphKeyItem bg-danger"></div> Blood Donations</div>
-                                        <div class="label right"><div class="graphKeyItem bg-primary"></div> Plasma Donations</div>
-                                        <div class="label right"><div class="graphKeyItem bg-warning"></div> Bone Marrow Donations</div>
-                                    </div>
+                                <div class="text-left d-inline-block">
+                                    <h6>Key</h6>
+                                    <div class="label right"><div class="graphKeyItem bg-danger"></div> Blood Donations</div>
+                                    <div class="label right"><div class="graphKeyItem bg-primary"></div> Plasma Donations</div>
+                                    <div class="label right"><div class="graphKeyItem bg-warning"></div> Bone Marrow Donations</div>
                                 </div>
                             </div>
                         </div>

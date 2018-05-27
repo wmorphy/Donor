@@ -96,6 +96,7 @@ function processProfileData() {
             $("#mobile").text(data.phone);
             $("#email").text(data.email);
 
+            // If a user hasn't donated, prompt them to do so.
             if (data.weight == "Donate to find out") {
                 $("#donorinfo").html("This information will be filled in automatically once you make your first donation.")
             }
@@ -109,6 +110,8 @@ function processProfileData() {
                 $("#haemoglobin").text(data.haemoglobin);
 
             }
+
+            // Hide loading icon and show content
             $(".loaderDiv").hide();
             $(".contentDiv").animate({opacity: 1});
         })

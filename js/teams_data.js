@@ -60,7 +60,7 @@ function processTeamData() {
             })
         });
 
-
+        // Hide loading icon and show content
         $(".loaderDiv").hide();
         $(".contentDiv").animate({opacity: 1});
     });

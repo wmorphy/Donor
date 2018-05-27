@@ -1,19 +1,27 @@
-var whereami = window.location.href.split("/");
-whereami = whereami[whereami.length - 1].split("#")[0].split("?")[0];
+var pagelocation = window.location.href.split("/");
+pagelocation = pagelocation[pagelocation.length - 1].split("#")[0].split("?")[0];
 
+// Pages only members can visit.
 var member = ["home", "book", "events", "teams", "profile"];
+
+// Pages both guests and members can visit.
 var hybrid = ["about", "contact", "information"];
+
+// Pages generally accessed only by guests.
 var guest = ["", "signup", "signin"]
 
+// Check the login status
 $.getJSON('/api-activeuserid', function(doc){
-    if (member.indexOf(whereami) != -1) {
+    // If accessing a members page and a guest, redirect to home.
+    if (member.indexOf(pagelocation) != -1) {
         if (doc.donorID == 0) {
             alert("You are not logged in.");
             window.location.href = "/";
         }
     }
 
-    if (hybrid.indexOf(whereami) != -1) {
+    // Handle which header bar to show based on login status.
+    if (hybrid.indexOf(pagelocation) != -1) {
         $(".loaderDiv").hide();
 
         if (doc.donorID != 0) {
@@ -27,7 +35,8 @@ $.getJSON('/api-activeuserid', function(doc){
         $(".contentDiv").animate({opacity: 1});
     }
 
-    if (member.indexOf(whereami) == -1 && hybrid.indexOf(whereami) == -1 && guest.indexOf(whereami) == -1) {
+    // 404 Case
+    if (member.indexOf(pagelocation) == -1 && hybrid.indexOf(pagelocation) == -1 && guest.indexOf(pagelocation) == -1) {
         $(".loaderDiv").hide();
 
         if (doc.donorID != 0) {
@@ -51,10 +60,6 @@ $.getJSON('/api-activeuserid', function(doc){
 $(document).ready(function() {
     $(".textFieldInput").hide();
     $(".textFieldInput").removeAttr("hidden");
-    $("#test2").hide();
-    $("#test2").removeAttr("hidden");
-    $("#test3").hide();
-    $("#test3").removeAttr("hidden");
     $(".join").hide();
     $(".join").removeAttr("hidden");
     $(".groupInvite").hide();
@@ -82,15 +87,6 @@ $(document).ready(function() {
     else if (location === "about") {
         $('.nav-pills a[href="#blood"]').tab('show');
     }
-
-
-    $("#test1, #test3").click(function() {
-        $(".textField").toggle();
-        $(".textFieldInput").toggle();
-        $("#test1").toggle();
-        $("#test2").toggle();
-        $("#test3").toggle();
-    });
 
 
 
@@ -154,6 +150,7 @@ $(document).ready(function() {
         $(this).addClass("btn-success");
     });
 
+    // Form validation
     window.addEventListener('load', function() {
         var form = document.getElementById('needs-validation');
         form.addEventListener('submit', function(event) {
@@ -166,6 +163,7 @@ $(document).ready(function() {
     }, false);
 });
 
+// Creates the graph data.
 function createGraph() {
     new Chart(document.getElementById("myChart"), {
         type: 'pie',
@@ -173,7 +171,7 @@ function createGraph() {
             labels: ["Blood", "Plasma", "Bone Marrow"],
             datasets: [{
                 label: '# of Votes',
-                data: [7, 4, 1],
+                data: [1, 1, 1],
                 backgroundColor: [
                     '#dc3545',
                     '#007bff',
