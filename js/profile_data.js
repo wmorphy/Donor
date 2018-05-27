@@ -138,10 +138,12 @@ function processTeamData() {
 
 
 // POPULATE PREVIOUS DONATIONS
+// fills out the previous donations tab on profile page
 function processDonationData() {
 
     var userdoc = $.getJSON('/api-activeuserid', function(doc){
         var userid = doc.donorID;
+
 
         // jQuery AJAX call for JSON
         $.getJSON( '/api-donations', function(data) {
@@ -158,15 +160,15 @@ function processDonationData() {
                         html += '<td class="text-danger font-weight-bold text-center">&times;</td>'
                         html += '<td class="text-danger font-weight-bold text-center">&times;</td></tr>'
                     }
-                    else if (this.type == "bone"){
-                        html += '<td class="text-success font-weight-bold text-center">&times;</td>'
-                        html += '<td class="text-danger font-weight-bold text-center">&#10004;</td>'
+                    else if (this.type == "plasma"){
+                        html += '<td class="text-danger font-weight-bold text-center">&times;</td>'
+                        html += '<td class="text-success font-weight-bold text-center">&#10004;</td>'
                         html += '<td class="text-danger font-weight-bold text-center">&times;</td></tr>'
                     }
                     else{
-                        html += '<td class="text-success font-weight-bold text-center">&times;</td>'
                         html += '<td class="text-danger font-weight-bold text-center">&times;</td>'
-                        html += '<td class="text-danger font-weight-bold text-center">&#10004;</td></tr>'
+                        html += '<td class="text-danger font-weight-bold text-center">&times;</td>'
+                        html += '<td class="text-success font-weight-bold text-center">&#10004;</td></tr>'
                     }
                     // append the previous donations to the div prevDon
                     $("#prevDon").append(html);
