@@ -7,7 +7,7 @@ var userdoc = $.getJSON('/api-activeuserid', function(doc) {
 $(document).ready(function() {
 
     $('#submitlandingpage').click(enterSite);
-
+    $('#logout').click(logout);
 
     var pathname = window.location.pathname;
 
@@ -210,6 +210,6 @@ function enterSite() {
 // LOG OUT FUNCTION
 function logout() {
     $.get('/api-activeuserid/'+"0", function(doc){});
-    window.location.href="/home";
+    window.location.href="/";
 
 };
