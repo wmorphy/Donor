@@ -186,14 +186,13 @@ function processDonationData() {
 //checks if the Password and email match those of someone in the database
 function enterSite() {
 
-    var inputID = document.getElementById("emailLandingPage").value;
+    var inputID = $("#emailLandingPage").val();
     alert(inputID);
     alert($("#passwordLandingPage").val());
     var user_exists = false;
 
 
     $.getJSON( '/api/' + inputID, function(data){
-
         user_exists = true;
         var password_str = data.password;
 
@@ -208,5 +207,6 @@ function enterSite() {
 
     .fail(function(){
         alert("fail");
-    });
+    })
+    .always(function() { alert('getJSON request ended!'); });
 };
