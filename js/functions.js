@@ -3,6 +3,7 @@ whereami = whereami[whereami.length - 1].split("#")[0].split("?")[0];
 
 var member = ["home", "book", "events", "teams", "profile"];
 var hybrid = ["about", "contact", "information"];
+var guest = ["", "signup", "signin"]
 
 $.getJSON('/api-activeuserid', function(doc){
     if (member.indexOf(whereami) != -1) {
@@ -13,6 +14,20 @@ $.getJSON('/api-activeuserid', function(doc){
     }
 
     if (hybrid.indexOf(whereami) != -1) {
+        $(".loaderDiv").hide();
+
+        if (doc.donorID != 0) {
+            $(".headerMember").removeAttr("hidden");
+        }
+
+        else {
+            $(".headerGuest").removeAttr("hidden");
+        }
+
+        $(".contentDiv").animate({opacity: 1});
+    }
+
+    if (member.indexOf(whereami) == -1 && hybrid.indexOf(whereami) == -1 && guest.indexOf(whereami) == -1) {
         $(".loaderDiv").hide();
 
         if (doc.donorID != 0) {
