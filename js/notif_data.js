@@ -22,7 +22,6 @@ function processNotifsData() {
             html += '<p class="mb-1">' + this.content + '</p>'
             html += '<h5 class="mb-0"><small><i>' + this.time + ' hours ago</i></small></h5>'
             html += '</div>'
-            html += '<button type="button" class="close" data-dismiss="alert">&times;</button>'
             html += '</div>'
             $("#append").append(html);
         });
