@@ -8,6 +8,7 @@ $(document).ready(function() {
 
     $('#submitlandingpage').click(enterSite);
     $('#logout').click(logout);
+    $("#needs-validation").submit(createNew)
 
     var pathname = window.location.pathname;
 
@@ -26,25 +27,21 @@ $(document).ready(function() {
         processTeamData();
     }
 
-    //EDIT MEMBER
-
-
-    //CALL CREATE MEMBER
-    //On create profile, an new member is added to the database.
-    $("#create").click(function(){
-
-        $.get('/api-createuser/'+$("#password").val() +'/' +$("#firstName").val()+'/'+$("#surname").val()+'/'+$("#dateOfBirth").val()
-            +'/'+$("#address").val()+'/'+$("#city").val()+'/'+$("#postcode").val()+'/'
-            +$("#state").val()+'/'+$("#mobile").val()+'/'+$("#email").val());
-        //reallocate window to Home
-        window.location.href = "/home";
-
-    });
 });
 
 
-
-
+// CREATE NEW ACCOUNT
+// calls function to create a new account
+function createNew() {
+    $.get('/api-createuser/' + $("#password").val() + '/' + $("#firstName").val() + '/' + $("#surname").val() + '/' + $("#dateOfBirth").val()
+        + '/' + $("#address").val() + '/' + $("#city").val() + '/' + $("#postcode").val() + '/'
+        + $("#state").val() + '/' + $("#mobile").val() + '/' + $("#email").val());
+    //reallocate window to Home
+    $.get('/api-activeuserid/' + $("#email").val(), function (doc) {
+    });
+    window.location.href = "/home";
+    alert("hello");
+};
 
 
 
@@ -121,27 +118,6 @@ function processProfileData() {
 
 
 
-// POPULATE TEAMS PAGE keep doing
-function processTeamData() {
-    var userdoc = $.getJSON('/api-activeuserid', function(doc){
-        var userid = doc.donorID;
-        console.log(userid);
-        // jQuery AJAX call for JSON
-        $.getJSON( '/api-teams', function(data) {
-
-            $.each(data, function(){
-                console.log("hello")
-                if (this.email == userid) {
-                     var html = "<%- include('./partials/placeholderteam', {name: "+ this.teamID +", members: "+ this.members.count() +", link: "+ this.link +"}) %>"
-                     console.log("oneMessage");
-                    // append the previous donations to the div prevDon
-                    $("#teamsPage").append(html);
-                }
-
-            })
-        });
-    });
-};
 
 
 
@@ -215,6 +191,16 @@ function enterSite() {
         alert("Email or password is incorrect. Please try again.");
     })
 };
+
+
+
+
+
+
+
+
+
+
 
 
 // LOG OUT FUNCTION
