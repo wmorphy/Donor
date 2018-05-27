@@ -54,6 +54,8 @@ var findActiveUserIDs = function(req,res){
     });
 };
 
+// UPDATE USER ID
+// Updates the active user id at the begining of the session
 var updateActiveUserID = function(req,res){
 
     var inputID = req.params.id;
@@ -67,18 +69,20 @@ var updateActiveUserID = function(req,res){
     });
 };
 
-//Find specific member by ID
-var findProfile = function(req,res){
 
+// FIND MEMBER
+// Find specific member by ID(email)
+var findProfile = function(req,res){
     var memberID = req.params.id;
-    Members.findById(memberID,function(err,member){
+    Members.find({email: memberID},function(err,member){
         if(!err){
-            res.send(member);
+            res.send(member[0]);
         }else{
             res.sendStatus(404);
         }
     });
 };
+
 
 var findAllNotifs = function(req,res){
     Notifications.find(function(err,notifs){

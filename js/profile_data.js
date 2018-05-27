@@ -24,18 +24,14 @@ $(document).ready(function() {
     //EDIT MEMBER
 
 
-
-
-
-
-
+    //CALL CREATE MEMBER
+    //On create profile, an new member is added to the database.
     $("#create").click(function(){
 
         $.get('/api-createuser/'+$("#password").val() +'/' +$("#firstName").val()+'/'+$("#surname").val()+'/'+$("#dateOfBirth").val()
             +'/'+$("#address").val()+'/'+$("#city").val()+'/'+$("#postcode").val()+'/'
             +$("#state").val()+'/'+$("#mobile").val()+'/'+$("#email").val());
         //reallocate window to Home
-        //should then fill profile with relevent information
         window.location.href = "/home";
 
     });
@@ -44,6 +40,13 @@ $(document).ready(function() {
 
 
 
+
+
+
+//UPDATE PROFILE
+//NOT DONE
+//
+//Adapt to update profile on edit
 function updateProfle(){
 var userdoc = $.getJSON('/api-activeuserid', function(doc) {
     var userid = doc.donorID;
@@ -53,11 +56,11 @@ var userdoc = $.getJSON('/api-activeuserid', function(doc) {
         var newEmail = $("#newEmail").val();
         var newMobile = $("#newMobile").val();
         var newDOB = $("#newDOB").val();
-        //Find memebers based on email
         //
         //
         //
         //
+        // CHANGE THIS FOR EMAIL LATER
         Members.findOneAndUpdate({_id: "00000000000000000" + userid}, {$set: {email: newEmail}}, {$set: {phone: newMobile}},
             {$set: {dateofbirth: newDOB}}, {new: true}, function (err, doc) {
             });
@@ -67,17 +70,16 @@ var userdoc = $.getJSON('/api-activeuserid', function(doc) {
 });
 }
 
-//Create HTML snippets
+
+// FILL PROFILE DATA
+// Gets relevent information from current user and appends it
 function processProfileData() {
-    //make sure we find people based of there email and not id
-    //Do it now
-    //
-    //
     var userdoc = $.getJSON('/api-activeuserid', function(doc){
+        //Current user id is equal to email
         var userid = doc.donorID;
 
         // jQuery AJAX call for JSON
-        $.getJSON( '/api/00000000000000000' + userid, function(data) {
+        $.getJSON( '/api/' + userid, function(data) {
             // store in global variable
 
             $("#fullName").append(data.firstname+ ' ' + data.lastname);
@@ -198,20 +200,21 @@ function processDonationData() {
 
 };
 
+
+
+// EMAIL AND PASSWORD CHECK
+//checks if the Password and email match those of someone in the database
 function enterSite() {
-// checks if the sign in page password is equal to one from the database
-    //make sure it is able to be used by the EMAIL
-    //
-    //
-    //
-    //
 
     var inputID = document.getElementById("emailLandingPage").value;
+    alert(inputID);
     var user_exists = false;
 
-    var  db_data = $.getJSON( '/api/00000000000000000' + inputID, function(data) {
+
+    var  db_data = $.getJSON( '/api/' + inputID, function(data) {
         user_exists = true;
         var password_str = data.password;
+        alert(data.password);
 
         if (password_str == $("#passwordlandingpage").val()){
             $.get('/api-activeuserid/' + inputID, function(data){});
