@@ -1,8 +1,8 @@
 
 <%- include('./partials/initial', {title: 'Sign Up', status: 'guest'}) %>
 
-    <div class="mx-auto bg-light w-50 mt-0 mb-3 px-3 py-3 shadow-sm" style="min-width: 400px;">
-        <h3 class="ml-2 text-center font-rubik mx-auto mb-0 text-uppercase">Your Teams</h3>
+    <div class="mx-auto bg-light w-50 mt-0 mb-3 px-3 py-3 rounded shadow-sm" style="min-width: 400px;">
+        <h2 class="ml-2 text-center font-rubik mx-auto mb-0 text-uppercase font-weight-bold">Teams</h2>
 
             <!--<form action="/action_page.php">-->
                 <!--<div class="form-group form-inline mb-0">-->
@@ -14,6 +14,16 @@
             <!--</form>-->
 
         <hr class="mb-0"/>
+
+        <ul class="nav nav-pills mt-3 justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#details">Your Teams</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#details">Search Teams</a>
+            </li>
+        </ul>
+
         <div class="d-flex flex-wrap justify-content-around">
             <%- include("./partials/placeholderteam", {name: 'Monash University', members: '123', image: 'monash.png'}) %>
             <%- include("./partials/placeholderteam", {name: 'University of Melbourne', members: '345', image: 'unimelb.jpg'}) %>
