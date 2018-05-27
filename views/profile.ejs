@@ -33,11 +33,11 @@
                         <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab" href="#details">Your Details</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#statistics">Your Statistics</a>
+                        <li class="nav-item startDisabled">
+                            <a class="nav-link" data-toggle="tab" href="#statistics" hidden>Your Statistics</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#appointments">Previous Appointments</a>
+                        <li class="nav-item startDisabled">
+                            <a class="nav-link" data-toggle="tab" href="#appointments" hidden>Previous Appointments</a>
                         </li>
                     </ul>
 
@@ -102,6 +102,7 @@
 
                             <h3 class="font-rubik text-uppercase">Donor Information</h3>
 
+                            <div id="donorinfo">
                             <strong>Donor Number:</strong>
                             <p id="donornum" class="d-inline">Loading...</p><br/>
 
@@ -116,6 +117,7 @@
 
                             <strong>Weight:</strong>
                             <p id="haemoglobin" class="d-inline">Loading...</p><br/>
+                            </div>
 
                         </div>
                         <div class="tab-pane container fade" id="statistics">
