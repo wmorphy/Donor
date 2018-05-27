@@ -15,10 +15,15 @@
             <!--</form>-->
         </div>
 
+        <hr/>
+
         <div class="justify-content-between">
-            <ul class="nav nav-tabs mt-3">
+            <ul class="nav nav-pills mt-3 justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#details">Running</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#details">Your Events</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#statistics">Past Events</a>
@@ -38,12 +43,7 @@
                     <%- include("./partials/placeholderevent", {name: 'The Tech Giants\' Giant Donation', description: '.', goal: '100L', teams: '19'}) %>
                     <%- include("./partials/placeholderevent", {name: 'University of Melbourne College Competition', description: '.', goal: '20L', teams: '6'}) %>
                 </div>
-
             </div>
         </div>
-    </div>
 
-</div>
-</div>
-</body>
-</html>
+<%- include('./partials/final') %>
