@@ -37,7 +37,7 @@ const fetchSignIn = (req, res) => {
     res.render("signin");
 };
 const fetchSignUp = (req, res, next) => {
-    res.render("signUp");
+    res.render("signup");
 
 };
 const fetchBookApp = (req, res) => {
