@@ -93,6 +93,8 @@ function processProfileData() {
             $("#weight").text(data.weight);
             $("#height").text(data.height);
             $("#haemoglobin").text(data.haemoglobin);
+            $(".loaderDiv").hide();
+            $(".contentDiv").animate({opacity: 1});
         });
 
 
@@ -177,14 +179,12 @@ function processDonationData() {
 //checks if the Password and email match those of someone in the database
 function enterSite() {
 
-    var inputID = document.getElementById("emailLandingPage").value;
-    alert("hello");
-    console.log("hello");
+    var inputID = $("#emailLandingPage").val();
+
     var user_exists = false;
 
 
     $.getJSON( '/api/' + inputID, function(data){
-
         user_exists = true;
         var password_str = data.password;
 
@@ -199,5 +199,6 @@ function enterSite() {
 
     .fail(function(){
         alert("fail");
-    });
+    })
+    .always(function() { alert('getJSON request ended!'); });
 };

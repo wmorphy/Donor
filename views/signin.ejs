@@ -1,8 +1,6 @@
 <%- include('./partials/initial', {title: 'Sign In', status: 'guest'}) %>
 
     <div class="mx-auto bg-light w-25 mt-0 mb-3 px-3 py-3 rounded shadow-sm text-center" style="min-width: 350px;">
-        <form>
-
             <h2 class="font-rubik mb-3 font-weight-bold text-uppercase">Member Login</h2>
 
             <hr/>
@@ -19,7 +17,7 @@
                 <!--Password input-->
                 <div>
                     <p class="ml-1 mb-1 font-weight-bold">Password <span class="text-danger">*</span></p>
-                    <input type="email" class="form-control" id = "passwordLandingPage" size=30 required>
+                    <input type="password" class="form-control" id = "passwordLandingPage" size=30 required>
                 </div>
             </div>
         <!--Remember me checkbox-->
@@ -36,8 +34,6 @@
 
             <a class="nav-link text-center p-0 mt-2" href="#">Forgot your password?</a>
             <a class="nav-link small text-center p-0 mt-2" href="signup">Don't have an account? Create one now.</a>
-
-        </form>
     </div>
 
 <%- include('./partials/final') %>
