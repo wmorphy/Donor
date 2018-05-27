@@ -8,7 +8,7 @@ var csrfProtection = csrf();
 
 
 
-
+//Render methods for all main views
 router.get("/", controller.fetchLanding);
 router.get("/information", controller.fetchInfo);
 router.get("/about", controller.fetchAbout);
@@ -38,16 +38,17 @@ router.get('/api-createuser/:pw/:first/:last/:DOB/:address/:suburb/:postcode/:st
 
 
 
-
+//Find profile
 router.get('/api/:id', restreqs.findProfile);
-// find all notifications
+// Find all notifications
 router.get('/api-notifs', restreqs.findAllNotifs);
-// find donations
+// Find all donations
 router.get('/api-donations', restreqs.findDonations);
+//Find all teams associated with a user
 router.get('/api-teams', restreqs.findAllTeams);
-
-
+//update current user session
 router.get('/api-activeuserid/:id', restreqs.updateActiveUserID);
+//Find active user number
 router.get('/api-activeuserid', restreqs.findActiveUserIDs);
 
 

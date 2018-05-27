@@ -6,7 +6,10 @@ $(document).ready(function() {
     processNotifsData();
 });
 
-// Create HTML snippets
+
+
+//NOTIFICATIONS
+//add notifications dynamically to the page
 function processNotifsData() {
 
     // jQuery AJAX call for JSON

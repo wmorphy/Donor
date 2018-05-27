@@ -5,6 +5,8 @@ var Donations = mongoose.model('donations');
 var ActiveUserIDs = mongoose.model('activeuserids');
 var Teams = mongoose.model('teams');
 
+//CREATE MEMBER
+// Create New member
 var createMember = function(req,res){
 
     var member = new Members({
@@ -35,7 +37,7 @@ var createMember = function(req,res){
 };
 
 
-
+// Fetch all teams
 var findAllTeams = function(req,res){
     Teams.find(function(err,teams){
         if(!err){
@@ -46,8 +48,8 @@ var findAllTeams = function(req,res){
     });
 }
 
-
-
+//USER ID
+//Keep track of Session
 var findActiveUserIDs = function(req,res){
     ActiveUserIDs.findOne({_id: '000000000000000000000001'}, function(err, activeuserid){
         if(!err){
@@ -90,7 +92,8 @@ var findProfile = function(req,res){
     });
 };
 
-
+//GET NOTIFICATIONS
+//get all notifications
 var findAllNotifs = function(req,res){
     Notifications.find(function(err,notifs){
         if(!err){
@@ -102,6 +105,7 @@ var findAllNotifs = function(req,res){
 }
 
 
+//FIND ALL PREVIOUS DONATIONS
 var findDonations = function(req,res){
     Donations.find(function(err,donations){
         if(!err){
