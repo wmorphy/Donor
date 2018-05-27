@@ -77,7 +77,7 @@ var findProfile = function(req,res){
     Members.find({email: memberID},function(err,member){
         var member1 = member[0];
         if(!err){
-            // console.log(member1);
+            console.log(member1);
             res.send(member1);
 
         }else{
